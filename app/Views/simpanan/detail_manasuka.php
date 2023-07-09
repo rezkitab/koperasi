@@ -1,0 +1,149 @@
+<?= $this->extend('layout/template', $title); ?>
+
+<?= $this->section('content'); ?>
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3><?= $title ?></h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Zero Configuration  Starts-->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- <a href="/user/add" type="button" class="btn btn-primary btn-sm">Tambah</a> -->
+                        <a href="/simpanan_manasuka" class="btn btn-primary" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </a>
+                        <div class="table-responsive">
+                            <br>
+                            <table class="display" id="basic-1">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Penerima</th>
+                                        <th>Nama Bank</th>
+                                        <th>No Rekening</th>
+                                        <th>Nominal</th>
+                                        <th>Status</th>
+                                        <th>Tgl Penarikan</th>
+                                        <th>Image</th>
+
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($detail_manasuka as $a) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $no++ ?></th>
+                                            <td><?= $a->full_name ?></td>
+                                            <td><?= $a->nama_bank ?></td>
+                                            <td><?= $a->no_rekening ?></td>
+                                            <td><?= $a->nominal ?></td>
+                                            <td><?php if ($a->status == 1) { ?>
+                                                    Berhasil
+                                                <?php } elseif ($a->status == 2) { ?>
+                                                    Pending
+                                                <?php } else { ?>
+                                                    Verifikasi Admin
+                                                <?php } ?></td>
+                                            <td><?= $a->tgl_penarikan ?></td>
+                                            <td><a data-bs-toggle="modal" data-original-title="test" data-bs-target="#openimage<?= $a->id ?>" type="button" title="Transfer Uang" class="">
+                                                    <img src="<?= base_url('assets/foto/bukti_transfer/' . $a->image . ''); ?>" alt="Image" width="70" height="70">
+                                                </a>
+                                            </td>
+                                            <?php if ($a->status == 2) { ?>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#exampleModal<?= $a->id ?>" type="button" title="Edit Data" class="btn btn-danger">
+                                                            <i class="fa fa-dollar"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            <?php } ?>
+                                        </tr>
+                                        <div class="modal fade" id="exampleModal<?= $a->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Edit Penarikan</h5>
+                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="<?= base_url('simpanan/edit_riwayat_manasuka/' . $a->id . ''); ?>" class="needs-validation" novalidate="" method="post">
+                                                            <?= csrf_field() ?>
+                                                            <div class="row g-3">
+                                                                <!-- <input type="text" name="id" value="<?= $a->id ?>" hidden> -->
+                                                                <input type="text" name="id_manasuka" value="<?= $a->id_manasuka ?>" hidden>
+                                                                <div class="col-md-12">
+                                                                    <label>Nama Lengkap</label>
+                                                                    <input class="form-control" id="nama_pemilik" name="nama_pemilik" type="text" value="<?= $a->nama_penerima ?>" required="">
+                                                                    <div class="valid-feedback">Looks good!</div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <label>Nama Bank</label>
+                                                                    <input class="form-control" id="nama_bank" name="nama_bank" type="text" value="<?= $a->nama_bank ?>" required="">
+                                                                    <div class="valid-feedback">Looks good!</div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <label>No Rekening</label>
+                                                                    <input class="form-control" id="no_rekening" name="no_rekening" type="number" value="<?= $a->no_rekening ?>" required="">
+                                                                    <div class="valid-feedback">Looks good!</div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <!-- <label>Nominal</label> -->
+                                                                    <input class="form-control" hidden id="nominal" name="nominal" type="number" value="<?= $a->nominal ?>" required="">
+                                                                    <div class="valid-feedback">Looks good!</div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Close</button>
+                                                                    <button class="btn btn-secondary" type="submit">Save changes</button>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="openimage<?= $a->id ?>" tabindex="-1" role="dialog" aria-labelledby="openimagefix" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="openimagefix">Bukti Transfer</h5>
+                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="<?= base_url('assets/foto/bukti_transfer/' . $a->image . ''); ?>" alt="Upload Image" width="500" height="400" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?= $this->endsection(); ?>

@@ -1,0 +1,98 @@
+WARNING - 2023-07-05 00:10:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-07-05 00:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:10:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:10:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:10:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:10:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
+INFO - 2023-07-05 00:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:10:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:11:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:11:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:11:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
+INFO - 2023-07-05 00:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:11:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:11:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:11:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:11:23 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
+INFO - 2023-07-05 00:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:11:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:11:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:12:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:12:03 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
+INFO - 2023-07-05 00:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:12:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:13:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:13:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:13:31 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
+INFO - 2023-07-05 00:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-07-05 00:13:38 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:14:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:14:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-07-05 00:14:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-07-05 00:14:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php on line 28.
+ 1 APPPATH\Views\pembiayaan\anggota_view_data_detail_pembiayaan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\koperasi-telkom\\app\\Views\\pembiayaan\\anggota_view_data_detail_pembiayaan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pembiayaan/anggota_view_data_detail_pembiayaan', [], true)
+ 5 APPPATH\Controllers\Pembiayaan.php(301): view('pembiayaan/anggota_view_data_detail_pembiayaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pembiayaan->anggota_detail('assets', 'images', 'dashboard', '1.png')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembiayaan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\koperasi-telkom\\public\\index.php')
