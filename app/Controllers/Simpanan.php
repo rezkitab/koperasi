@@ -304,7 +304,7 @@ class Simpanan extends BaseController
 
         $this->simpanan_manasuka->insert($data);
 
-        return redirect()->to('/simpanan_manasuka');
+        return redirect()->to('/simpanan/simpanan_manasuka');
     }
     public function add_riwayat_manasuka($id)
     {

@@ -40,7 +40,7 @@
                                     <li><a href="<?= base_url('pembiayaan') ?>">Pembiayaan</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="layout"></i><span>Laporan</span></a>
+                            <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="book"></i><span>Laporan</span></a>
                                 <ul class="nav-submenu menu-content">
                                     <!-- <li><a href="/simpanan/simpanan_wajib">Simpanan Wajib</a></li> -->
                                     <li><a href="/laporan/simpanan_pokok">Simpanan Pokok</a></li>

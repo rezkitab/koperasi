@@ -19,7 +19,7 @@
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-header pb-0">
-                        <a href="/simpanan_manasuka" class="btn btn-primary" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        <a href="/simpanan/simpanan_manasuka" class="btn btn-primary" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i>
                             Kembali</a>
                     </div>
                     <div class="card-body">

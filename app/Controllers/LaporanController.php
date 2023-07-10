@@ -128,7 +128,7 @@ class LaporanController extends BaseController
     {
         $id_user = $this->request->getPost('id_user');
         $tgl_bayar = $this->request->getPost('tgl_bayar');
-        $simpanan_manasuka = $this->db->query('SELECT sw.*, u.full_name FROM riwayat_manasuka sw left join users u on u.id_user=sw.id_user where sw.id_user = ' . $id_user . ' and sw.tgl_penarikan like "%' . $tgl_bayar . '%" and u.role = 2')->getResult();
+        $simpanan_manasuka = $this->db->query('SELECT sw.*, u.full_name FROM riwayat_manasuka sw left join users u on u.id_user=sw.id_user where sw.id_user = ' . $id_user . ' and u.role = 2')->getResult();
 
         $users = $this->db->query('SELECT * FROM users where role = 2')->getResult();
         // var_dump($simpanan_wajib);

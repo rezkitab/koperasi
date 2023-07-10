@@ -27,7 +27,7 @@
                     <?php endif; ?>
 
                     <div class="card-body">
-                        <a href="/simpanan/add_manasuka" type="button" class="btn btn-primary btn-sm">Tambah</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#TambahManasuka" type="button" class="btn btn-primary btn-sm">Tambah</a>
 
                         <div class="table-responsive">
                             <br>
@@ -40,7 +40,6 @@
                                         <th>Tanggal</th>
                                         <th>Status</th>
                                         <th>Metode Membayaran</th>
-                                        <th>pdf_url</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -60,15 +59,16 @@
                                                     Lunas
                                                 <?php } ?></td>
                                             <td><?= $a->metode_pembayaran ?></td>
-                                            <td><a target="_blank" rel="noopener noreferrer" href="<?= $a->pdf_url ?>">Open Pdf</td>
 
                                             <?php if ($a->status == 1) { ?>
                                                 <td>
                                                     <div class="btn-group">
-                                                        <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#exampleModal<?= $a->id ?>" type="button" title="Ambil Uang" class="btn btn-warning">
+                                                        <a href="#" data-bs-toggle="modal" data-original-title="test" data-bs-target="#exampleModal<?= $a->id ?>" type="button" title="Ambil Uang" class="btn btn-warning">
                                                             <i class="fa fa-dollar"></i>
-                                                        </button>
-                                                        <a href="/simpanan/detail_manasuka/<?= $a->id ?>" type="button" class="btn btn-primary">
+                                            </a> 
+                                                    </div>
+                                                    <div class="btn-group">
+                                                    <a href="/simpanan/detail_manasuka/<?= $a->id ?>" type="button" class="btn btn-primary">
                                                             <i class="fa fa-info-circle"></i>
                                                         </a>
                                                     </div>
@@ -125,6 +125,35 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="modal fade" id="TambahManasuka" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Tambah Simpanan</h5>
+                                                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                    <form id="payment-form" action="<?= base_url('simpanan/pay_manasuka'); ?>" class="needs-validation" novalidate="" method="post">
+                                                        <?= csrf_field() ?>
+                                                        <input type="hidden" name="result_type" id="result-type" value="">
+                                                        <input type="hidden" name="result_data" id="result-data" value="">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-12">
+                                                                <label>Nominal</label>
+                                                                <input class="form-control" id="nominal" onkeyup="getvalue(this.value)" type="text" required="">
+                                                                <input hidden class="form-control" id="rp" name="nominal" type="text" required="">
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                            </div>
+
+                                                        </div>
+                                                        <br>
+                                                        <button class="btn btn-primary" id="pay-button" style="margin-left: 75%;" type="submit">Simpan</button>
+                                                    </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
                     </div>
                 </div>
             </div>

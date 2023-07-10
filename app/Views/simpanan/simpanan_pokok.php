@@ -50,7 +50,7 @@
                                                                 <?php } ?></p>
                                                             <p style="text-align: center">
                                                                 <?php if ($getsimpanan['order_id'] != null) { ?>
-                                                                    <a href="<?= $getsimpanan['pdf_url'] ?>" style="padding: 10px; background-color: #24695c; color: #fff; display: inline-block; border-radius: 4px;font-weight:600;">PDF URL</a>
+                                                                    <a href="<?= $getsimpanan['pdf_url'] ?>" style="padding: 10px; background-color: #24695c; color: #fff; display: inline-block; border-radius: 4px;font-weight:600;">Invoice</a>
                                                                     <?php if ($getsimpanan['status'] != 1) { ?>
                                                                         <a href="<?= base_url('Notification/cektransaksi'); ?>" style="padding: 10px; background-color: #24695c; color: #fff; display: inline-block; border-radius: 4px;font-weight:600;">Cek Transaksi</a>
                                                                     <?php } ?>

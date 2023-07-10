@@ -31,9 +31,6 @@
 
                                         </select>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <input type="date" class="form-control" name="tgl_bayar">
-                                    </div>
                                     <div class="col-sm-2">
                                         <button class="form-control btn btn-primary" style="color: white;">Cari</button>
                                     </div>
