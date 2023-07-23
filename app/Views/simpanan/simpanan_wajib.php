@@ -42,9 +42,6 @@
                                             <td><?= $a->created_at ?></td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <!-- <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#exampleModal<?= $a->id ?>" type="button" title="Ambil Uang" class="btn btn-warning">
-                                                        <i class="fa fa-dollar"></i>
-                                                    </button> -->
                                                     <a href="/simpanan/add_simpanan_wajib/<?= $a->id ?>" type="button" class="btn btn-primary">
                                                         Bayar
                                                     </a>

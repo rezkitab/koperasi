@@ -45,46 +45,59 @@ class User extends BaseController
             $this->db = \Config\Database::connect();
             $this->builder = $this->db->table('users');
             // DB Transaction
-            $this->db->transBegin();
-            $id_user = rand(000, 999);
-            $data = [
-                'id_user' => $id_user,
-                'username' => $this->request->getPost('username'),
-                'full_name' => $this->request->getPost('full_name'),
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-                'nik' => $this->request->getPost('nik'),
-                'no_hp' => $this->request->getPost('no_hp'),
+            $validation =  \Config\Services::validation();
+            
+            $validation->setRules([
+                "username" => ["label" => " Username", "rules" => "required|min_length[3]|max_length[20]"],
+                "full_name" => ["label" => "Full Name", "rules" => "required|min_length[3]|max_length[40]"],
+                "nik" => ["label" => "Nik", "rules" => "required|min_length[3]|max_length[20]"],
+                "no_hp" => ["label" => "No Hp", "rules" => "required|min_length[3]|max_length[15]"],
+                "password" => ["label" => "Password", "rules" => "required|min_length[4]|max_length[20]"],
+            ]);
+      
+            if($validation->withRequest($this->request)->run()){
+                $id_user = rand(000, 999);
+                $data = [
+                    'id_user' => $id_user,
+                    'username' => $this->request->getPost('username'),
+                    'full_name' => $this->request->getPost('full_name'),
+                    'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                    'nik' => $this->request->getPost('nik'),
+                    'no_hp' => $this->request->getPost('no_hp'),
 
-                'image' => 'anggota.png',
-                'is_active' => 1,
-                'role' => 2,
-                'tgl_registrasi' => date('Y-m-d H:i:s'),
-                'created_at' => date('Y-m-d H:i:s'),
-            ];
-            $simpanaPokok = [
-                'id_user' => $id_user,
-                'kode_transaksi' => 'TRK' . rand(000, 999),
-                'nominal' => 100000,
-                'status' => 2,
-                'metode_pembayaran' => 'Online',
+                    'image' => 'anggota.png',
+                    'is_active' => 1,
+                    'role' => 2,
+                    'tgl_registrasi' => date('Y-m-d H:i:s'),
+                    'created_at' => date('Y-m-d H:i:s'),
+                ];
+                $simpanaPokok = [
+                    'id_user' => $id_user,
+                    'kode_transaksi' => 'TRK' . rand(000, 999),
+                    'nominal' => 100000,
+                    'status' => 2,
+                    'metode_pembayaran' => 'Online',
 
-            ];
+                ];
 
-            $success = $this->builder->insert($data);
-            $success = $this->db->table('simpanan_pokok')->insert($simpanaPokok);
+                $success = $this->builder->insert($data);
+                $success = $this->db->table('simpanan_pokok')->insert($simpanaPokok);
 
-            // data anggota
-            $anggota = [
-                'kode_anggota'      => 'AGT' . rand(000, 999),
-                'user_id'           => $id_user,
-                'tempat_lahir'      => $this->request->getPost('tempat_lahir'),
-                'tanggal_lahir'     => $this->request->getPost('tanggal_lahir'),
-                'jenis_kelamin'     => $this->request->getPost('jenis_kelamin'),
-            ];
+                // data anggota
+                $anggota = [
+                    'kode_anggota'      => 'AGT' . rand(000, 999),
+                    'user_id'           => $id_user,
+                    // 'tempat_lahir'      => $this->request->getPost('tempat_lahir'),
+                    // 'tanggal_lahir'     => $this->request->getPost('tanggal_lahir'),
+                    // 'jenis_kelamin'     => $this->request->getPost('jenis_kelamin'),
+                ];
 
-            $success = $this->db->table('anggota')->insert($anggota);
-
-            $this->db->transCommit();
+                $success = $this->db->table('anggota')->insert($anggota);
+            }else{
+                $data["validation"] = $validation->getErrors();
+                return redirect()->to(base_url('/user/add'));
+            }
+ 
             if ($success) {
                 session()->setFlashdata('msg', 'ditambahkan');
                 return redirect()->to(base_url('/user/index'));
@@ -92,7 +105,6 @@ class User extends BaseController
         } catch (Throwable $th) {
             // Melakukan rollback, data tidak akan insert atau update jika code gagal dieksekusi
             // $this->logError($th);
-            $this->db->transRollback();
             session()->setFlashdata('pesan', 'ditambahkan');
             return [
                 'status' => false,

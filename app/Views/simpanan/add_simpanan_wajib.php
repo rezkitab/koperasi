@@ -6,7 +6,9 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3><?= $title ?></h3>
+                    <h3>
+                        <div> Simpanan Wajib</div>
+                    </h3>
                 </div>
 
             </div>

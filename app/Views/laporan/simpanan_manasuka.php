@@ -83,6 +83,7 @@
                                         <th>Nama</th>
                                         <th>Nama Bank</th>
                                         <th>No Rekening</th>
+                                        <th>Jenis</th>
                                         <th>Nominal</th>
                                         <th>Status</th>
                                         <th>Tanggal Penarikan</th>
@@ -97,10 +98,16 @@
                                             <td><?= $a->full_name ?></td>
                                             <td><?= $a->nama_bank ?></td>
                                             <td><?= $a->no_rekening ?></td>
-                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
-                                            <td><?php if ($a->status == 200) { ?>
+                                            <td><?= $a->jenis ?></td>
+                                            <td><?php if ($a->jenis == "Masuk") { ?>
+                                                    Rp. <?= number_format($a->nominal, 0, ",", ".")  ?>
+                                                <?php  } else { ?>
+                                                    Rp. <?= number_format($a->nominal_tarik, 0, ",", ".")  ?>
+                                                <?php }  ?>
+                                            </td>
+                                            <td><?php if ($a->status == 1) { ?>
                                                     Berhasil
-                                                <?php } elseif ($a->status == 201) { ?>
+                                                <?php } elseif ($a->status == 2) { ?>
                                                     Pending
                                                 <?php } else { ?>
 

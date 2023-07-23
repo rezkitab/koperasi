@@ -28,12 +28,12 @@
                             <div class="row g-3">
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom01">Username</label>
-                                    <input class="form-control" id="username" name="username" type="text" required="">
-                                    <div class="valid-feedback">Looks good!</div>
+                                    <input class="form-control" id="username" name="username" type="text" required>
+                                    <small class="text-danger"><?= isset($validation) ? $validation['username'] : null;  ?></small>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom02">Nama Lengkap</label>
-                                    <input class="form-control" id="full_name" name="full_name" type="text" required="">
+                                    <input class="form-control" id="full_name" name="full_name" type="text" required>
                                     <div class="valid-feedback">Looks good!</div>
                                 </div>
                                 <div class="col-md-4 mb-4">
@@ -45,16 +45,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom02">Nik</label>
-                                    <input class="form-control" id="nik" name="nik" type="text" required="">
+                                    <input class="form-control" id="nik" name="nik" type="text" required>
                                     <div class="valid-feedback">Looks good!</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom02">Telepon</label>
-                                    <input class="form-control" id="no_hp" name="no_hp" type="text" required="">
+                                    <input class="form-control" id="no_hp" name="no_hp" type="text" required>
                                     <div class="valid-feedback">Looks good!</div>
                                 </div>
                                 <hr>
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <label class="form-label">Tempat Lahir</label>
                                     <input class="form-control" name="tempat_lahir" type="text" required="">
                                     <div class="valid-feedback">Looks good!</div>
@@ -72,7 +72,7 @@
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
                                     <div class="valid-feedback">Looks good!</div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <br>

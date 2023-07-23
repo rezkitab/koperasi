@@ -26,9 +26,10 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama</th>
-                                        <th>Nominal</th>
-                                        <th>Status</th>
                                         <th>Tanggal Bayar</th>
+                                        <th>Status</th>
+                                        <th>Nominal</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +39,9 @@
                                         <tr>
                                             <th scope="row"><?= $no++ ?></th>
                                             <td><?= $a->full_name ?></td>
-                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
+                                           
+                                            
+                                            <td><?= $a->tgl_bayar ?></td>
                                             <td><?php if ($a->status == 1) { ?>
                                                     Berhasil
                                                 <?php } elseif ($a->status == 2) { ?>
@@ -47,7 +50,7 @@
 
                                                     Verifikasi Admin
                                                 <?php } ?></td>
-                                            <td><?= $a->tgl_bayar ?></td>
+                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
 
 
                                         </tr>

@@ -61,68 +61,71 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                    <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                    <div class="pb-2">
-                            <div class="row">
-                                <div class="col-sm-12" style="background-color:white;" align="center">
-                                    <b>KOPERASI SYARIAH</b>
-                                </div>
-                                <div class="col-sm-12" style="background-color:white;" align="center">
-                                    <b>LAPORAN SIMPANAN WAJIB</b>
-                                </div>
-                                <div class="col-sm-12" style="background-color:white;" align="center">
-                                    <b>Periode</b>
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="pb-2">
+                                        <div class="row">
+                                            <div class="col-sm-12" style="background-color:white;" align="center">
+                                                <b>KOPERASI SYARIAH</b>
+                                            </div>
+                                            <div class="col-sm-12" style="background-color:white;" align="center">
+                                                <b>LAPORAN SIMPANAN WAJIB</b>
+                                            </div>
+                                            <div class="col-sm-12" style="background-color:white;" align="center">
+                                                <b>Periode</b>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <?php if ($id_user != "") { ?>
+                                                <a target="_blank" href="/LaporanController/pdf_wajib/<?= $id_user ?>/<?= $tgl_bayar ?>/<?= $status ?>" class="form-control btn btn-danger" style="color: white; width: 10%">PDF</a>
+                                            <?php } else { ?>
+                                                <a target="_blank" href="/LaporanController/pdf_wajib_all" class="form-control btn btn-danger" style="color: white; width: 10%">PDF</a>
+
+                                            <?php }  ?>
+                                            <br>
+                                            <br>
+                                            <table class="display" id="basic-1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Nama</th>
+                                                        <th>Tanggal Bayar</th>
+                                                        <th>Bulan</th>
+                                                        <th>Status</th>
+                                                        <th>Nominal</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    $no = 1;
+                                                    foreach ($simpanan_wajib as $a) : ?>
+                                                        <tr>
+                                                            <th scope="row"><?= $no++ ?></th>
+                                                            <td><?= $a->full_name ?></td>
+                                                            <td><?= $a->tgl_bayar ?></td>
+
+                                                            <td><?= $a->nama_bulan ?></td>
+                                                            <td><?php if ($a->status == 200) { ?>
+                                                                    Berhasil
+                                                                <?php } elseif ($a->status == 201) { ?>
+                                                                    Pending
+                                                                <?php } else { ?>
+                                                                    Gagal
+                                                                <?php } ?></td>
+                                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
+
+                                                        </tr>
+                                                    <?php endforeach ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        <div class="table-responsive">
-                            <?php if ($id_user != "") { ?>
-                                <a target="_blank" href="/LaporanController/pdf_wajib/<?= $id_user ?>/<?= $tgl_bayar ?>/<?= $status ?>" class="form-control btn btn-danger" style="color: white; width: 10%">PDF</a>
-                            <?php } else { ?>
-                                <a target="_blank" href="/LaporanController/pdf_wajib_all" class="form-control btn btn-danger" style="color: white; width: 10%">PDF</a>
-
-                            <?php }  ?>
-                            <br>
-                            <br>
-                            <table class="display" id="basic-1">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Nominal</th>
-                                        <th>Bulan</th>
-                                        <th>Status</th>
-                                        <th>Tanggal Bayar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $no = 1;
-                                    foreach ($simpanan_wajib as $a) : ?>
-                                        <tr>
-                                            <th scope="row"><?= $no++ ?></th>
-                                            <td><?= $a->full_name ?></td>
-                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
-                                            <td><?= $a->nama_bulan ?></td>
-                                            <td><?php if ($a->status == 200) { ?>
-                                                    Berhasil
-                                                <?php } elseif ($a->status == 201) { ?>
-                                                    Pending
-                                                <?php } else { ?>
-                                                    Gagal
-                                                <?php } ?></td>
-                                            <td><?= $a->tgl_bayar ?></td>
-                                        </tr>
-                                    <?php endforeach ?>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<?= $this->endsection(); ?>
+                <?= $this->endsection(); ?>

@@ -12,6 +12,9 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+
+</div>
     <!-- Container-fluid starts-->
     <div class="container-fluid">
         <div class="row">
@@ -31,8 +34,8 @@
                         <!-- <a href="/simpanan_manasuka" class="btn btn-primary" type="submit"><i class="fa fa-arrow-left" aria-hidden="true"></i>
                             Kembali</a> -->
                         <div class="table-responsive">
-                            <br>
-                            <table class="display" id="basic-1">
+                           
+                            <table class="display" id="basic-2">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -53,12 +56,17 @@
                                     $no = 1;
                                     foreach ($verifikasi_manasuka as $a) : ?>
                                         <tr>
-                                            <th scope="row"><?= $no++ ?></th>
+                                            <th><?= $no++ ?></th>
                                             <td><?= $a->full_name ?></td>
                                             <td><?= $a->nama_penerima ?></td>
                                             <td><?= $a->nama_bank ?></td>
                                             <td><?= $a->no_rekening ?></td>
-                                            <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
+                                            <td><?php if ($a->jenis == "Masuk") { ?>
+                                                    Rp. <?= number_format($a->nominal, 0, ",", ".")  ?>
+                                                <?php  } else { ?>
+                                                    Rp. <?= number_format($a->nominal_tarik, 0, ",", ".")  ?>
+                                                <?php }  ?>
+                                            </td>
                                             <td><?php if ($a->status == 1) { ?>
                                                     Berhasil
                                                 <?php } elseif ($a->status == 2) { ?>
@@ -72,7 +80,6 @@
 
                                                     <img src="<?= base_url('assets/foto/bukti_transfer/' . $a->image . ''); ?>" alt="Upload Image" width="70" height="70">
                                                 </a>
-
                                             </td>
                                             <?php if ($a->status == 2) { ?>
                                                 <td>
@@ -92,7 +99,16 @@
                                                         <!-- <a href="/simpanan/acc_manasuka/<?= $a->id ?>" type="button" title="Acc Penarikan" class="btn btn-warning"><i class="fa fa-check"></i> </a> -->
                                                     </div>
                                                 </td>
-                                            <?php } ?>
+                                            <?php } else { ?>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button data-bs-toggle="modal" data-original-title="done" type="button" title="Done" class="btn btn-success btn-*-gradien">
+                                                            Done
+                                                        </button>
+                                                        <!-- <a href="/simpanan/acc_manasuka/<?= $a->id ?>" type="button" title="Acc Penarikan" class="btn btn-warning"><i class="fa fa-check"></i> </a> -->
+                                                    </div>
+                                                </td>
+                                           <?php } ?>
                                         </tr>
                                         <div class="modal fade" id="exampleModal<?= $a->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -106,7 +122,7 @@
                                                             <?= csrf_field() ?>
                                                             <div class="row g-3">
                                                                 <!-- <input type="text" name="id" value="<?= $a->id ?>" hidden> -->
-                                                                <input type="text" name="id_manasuka" value="<?= $a->id_manasuka ?>" hidden>
+
                                                                 <div class="col-md-12">
                                                                     <label>Nama Lengkap</label>
                                                                     <input readonly class="form-control" id="nama_pemilik" name="nama_pemilik" type="text" value="<?= $a->nama_penerima ?>" required="">
@@ -124,7 +140,7 @@
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <label>Nominal</label>
-                                                                    <input class="form-control" readonly id="nominal" name="nominal" type="number" value="<?= $a->nominal ?>" required="">
+                                                                    <input class="form-control" readonly id="nominal" name="nominal" type="number" value="<?= $a->nominal_tarik ?>" required="">
                                                                     <div class="valid-feedback">Looks good!</div>
                                                                 </div>
                                                                 <div class="col-md-12">

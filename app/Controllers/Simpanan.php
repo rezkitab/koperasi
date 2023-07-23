@@ -27,20 +27,20 @@ class Simpanan extends BaseController
 
 
             $data['simpanan_pokok'] =
-                $this->db->query('SELECT order_id FROM simpanan_pokok where id_user = ' . $this->session->get('id_user') . '')->getResult();
+                $this->db->query('SELECT order_id FROM simpanan_pokok where id_user = ' . $this->session->get('id_user') . ' and status = 2')->getResult();
 
             if (isset($data['simpanan_pokok'][0]->order_id)) {
                 $this->cektransaksi();
             }
             $data['riwayat_simpanan'] =
-                $this->db->query('SELECT order_id FROM riwayat_simpanan where id_user = ' . $this->session->get('id_user') . '')->getResult();
+                $this->db->query('SELECT order_id FROM riwayat_simpanan where id_user = ' . $this->session->get('id_user') . ' and status = 201')->getResult();
             if (isset($data['riwayat_simpanan'][0]->order_id)) {
                 // var_dump("asd");
                 // die;
                 $this->cektransaksisimwajib();
             }
             $data['simpanan_manasuka'] =
-                $this->db->query('SELECT order_id FROM simpanan_manasuka where id_user = ' . $this->session->get('id_user') . '')->getResult();
+                $this->db->query('SELECT order_id FROM simpanan_manasuka where id_user = ' . $this->session->get('id_user') . ' and status = 2')->getResult();
             if (isset($data['simpanan_manasuka'][0]->order_id)) {
                 $this->cektransaksimanasuka();
             }
@@ -236,8 +236,13 @@ class Simpanan extends BaseController
     }
     public function simpanan_manasuka()
     {
-        $simpanan_manasuka  = $this->db->query('SELECT * FROM simpanan_manasuka sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getResult();
-        $d = ['title' => 'Simpanan Manasuka', 'simpanan_manasuka' => $simpanan_manasuka];
+        $simpanan_manasuka  = $this->db->query('SELECT  sm.*, u.full_name FROM simpanan_manasuka sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getResult();
+        $saldo  = $this->db->query('SELECT ((SELECT SUM(sk.nominal) FROM simpanan_manasuka sk WHERE sk.id_user = ' . $this->session->get('id_user') . ' and sk.status = 1) - 
+        (SELECT SUM(su.nominal_tarik) FROM simpanan_manasuka su WHERE su.id_user = ' . $this->session->get('id_user') . ')) as total FROM simpanan_manasuka sm 
+        left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . ' and status = 1 GROUP BY sm.id_user')->getResult();
+        // var_dump($simpanan_manasuka);
+        // die;
+        $d = ['title' => 'Simpanan Manasuka', 'simpanan_manasuka' => $simpanan_manasuka, 'saldo' => $saldo];
         return view('simpanan/simpanan_manasuka', $d);
     }
     public function add_manasuka()
@@ -267,6 +272,7 @@ class Simpanan extends BaseController
             'pdf_url' => $pdf_url,
             'tgl_bayar' => date('Y-m-d H:i:s'),
             'metode_pembayaran' => 'Online',
+            'jenis' => 'Masuk',
             'Status' => $status,
             'order_id' => $orderid,
         );
@@ -306,32 +312,31 @@ class Simpanan extends BaseController
 
         return redirect()->to('/simpanan/simpanan_manasuka');
     }
-    public function add_riwayat_manasuka($id)
+    public function add_riwayat_manasuka()
     {
-        $cekNominal = $this->db->query('select nominal from simpanan_manasuka where id = ' . $id . ' and id_user = ' . $this->session->get('id_user') . '')->getRowArray();
-        $nominal = $this->request->getPost('nominal');
-        // var_dump($cekNominal['nominal']);
+        $cekNominal = $this->db->query('select sum(nominal) as total from simpanan_manasuka where status = 1 and id_user = ' . $this->session->get('id_user') . '')->getRowArray();
+        $nominal = $this->request->getPost('nominal_tarik');
+        // var_dump($nominal);
         // die;
-        if ($nominal > $cekNominal['nominal']) {
-            return redirect()->to('/simpanan_manasuka')->withInput()->with('message', 'Nominal tidak boleh lebih besar dari simpanan');
+        if ($nominal > $cekNominal['total']) {
+            return redirect()->to('/simpanan/simpanan_manasuka')->withInput()->with('message', 'Nominal tidak boleh lebih besar dari Saldo');
         } else {
             $data = [
                 'id_user' => $this->session->get('id_user'),
-                'id_manasuka' => $this->request->getPost('id_manasuka'),
                 'nama_penerima' => $this->request->getPost('nama_pemilik'),
                 'nama_bank' => $this->request->getPost('nama_bank'),
                 'no_rekening' => $this->request->getPost('no_rekening'),
-                'nominal' => $this->request->getPost('nominal'),
+                'nominal_tarik' => $this->request->getPost('nominal_tarik'),
                 'status' => 2,
+                'jenis' => "Keluar",
+                'metode_pembayaran' => "Transfer",
                 'tgl_penarikan' => date('Y-m-d H:i:s'),
-                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ];
-            $data_nominal = [
-                'nominal' => $cekNominal['nominal'] - $this->request->getPost('nominal'),
-            ];
-            $this->db->table('simpanan_manasuka')->where('id', $this->request->getPost('id_manasuka'))->set($data_nominal)->update();
-            $this->db->table('riwayat_manasuka')->set($data)->insert();
-            return redirect()->to('/simpanan_manasuka')->withInput()->with('message', 'Penarikan Berhasil. Silahkan menunggu 1X 24jam untuk di PROSES admin');
+            
+            // $this->db->table('simpanan_manasuka')->where('id', $this->request->getPost('id_manasuka'))->set($data_nominal)->update();
+            $this->db->table('simpanan_manasuka')->set($data)->insert();
+            return redirect()->to('/simpanan/simpanan_manasuka')->withInput()->with('message', 'Penarikan Berhasil. Silahkan menunggu 1X 24jam untuk di PROSES admin');
         }
     }
     public function detail_manasuka($id_manasuka)
@@ -371,7 +376,7 @@ class Simpanan extends BaseController
     }
     public function verifikasi_manasuka()
     {
-        $verifikasi_manasuka  = $this->db->query('SELECT u.full_name, rm.* FROM riwayat_manasuka rm left join users u on rm.id_user=u.id_user order by rm.tgl_penarikan DESC')->getResult();
+        $verifikasi_manasuka  = $this->db->query('SELECT u.full_name, rm.* FROM simpanan_manasuka rm left join users u on rm.id_user=u.id_user where rm.jenis = "Keluar" order by rm.status DESC')->getResult();
 
         $d = ['title' => 'Verifikasi Simpanan Manasuka', 'verifikasi_manasuka' => $verifikasi_manasuka];
         return view('simpanan/verifikasi_manasuka', $d);
@@ -383,7 +388,7 @@ class Simpanan extends BaseController
             'id_admin' => $this->session->get('id_user'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
-        $this->db->table('riwayat_manasuka')->where('id', $id)->set($data)->update();
+        $this->db->table('simpanan_manasuka')->where('id', $id)->set($data)->update();
         return redirect()->to('simpanan/verifikasi_manasuka')->withInput()->with('message', 'Verifikasi Berhasil, Silahkan Transfer uang ke anggota dengan jumlah yang di tentukan');
     }
     public function upload_image($id)
@@ -397,13 +402,14 @@ class Simpanan extends BaseController
             'id_admin' => $this->session->get('id_user'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
-        $this->db->table('riwayat_manasuka')->where('id', $id)->set($data)->update();
+        $this->db->table('simpanan_manasuka')->where('id', $id)->set($data)->update();
         $dataimage->move('assets/foto/bukti_transfer/', $fileName);
         session()->setFlashdata('success', 'image Berhasil diupload');
         return redirect()->to(base_url('simpanan/verifikasi_manasuka'));
     }
     public function add_simpanan_wajib($id)
     {
+
         $riwayat_simpanan  = $this->db->query('SELECT u.full_name, rs.*, b.nama_bulan FROM riwayat_simpanan rs left join users u on rs.id_user=u.id_user left join bulan b on rs.id_bulan=b.id_bulan where rs.id_sim_wajib = ' . $id . ' order by rs.id_bulan ASC')->getResult();
         $simpanan_wajib  = $this->db->query('SELECT * FROM simpanan_wajib where id = ' . $id . '')->getRowArray();
         $bulan

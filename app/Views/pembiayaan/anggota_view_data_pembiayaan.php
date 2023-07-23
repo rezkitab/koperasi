@@ -25,7 +25,7 @@
                         <?php if (!empty($simpanan)) : ?>
                             <a href="<?= base_url('pembiayaan/anggota_add') ?>" class="btn btn-primary text-white"><i class="fa fa-plus"></i> Pengajuan</a>
                         <?php else : ?>
-                            <h6>Silahkan membayar simpanan pokok untuk mengajukan pembiayaan.</h6>
+                            <h6 >Silahkan membayar simpanan pokok untuk mengajukan pembiayaan.</h6>
                         <?php endif ?>
                         <div class="table-responsive">
                             <br>

@@ -101,7 +101,7 @@
                                             <label class="col-sm-3 col-form-label">Margin</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input class="form-control form-control-sm" type="text" value="10%" name="margin" readonly>
+                                                    <input class="form-control form-control-sm" type="text" value="5%" name="margin" readonly>
                                                     <!-- <span class="input-group-text">%</span> -->
                                                 </div>
                                             </div>

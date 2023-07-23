@@ -137,9 +137,6 @@ use Config\MyConfig;
     <script src="<?= base_url() ?>/assets/js/sweet-alert/sweetalert.min.js"></script>
     <script src="<?= base_url() ?>/assets/js/select2/select2.full.min.js"></script>
 
-    <script src="<?= base_url() ?>/assets/js/datepicker/date-picker/datepicker.js"></script>
-    <script src="<?= base_url() ?>/assets/js/datepicker/date-picker/datepicker.en.js"></script>
-    <script src="<?= base_url() ?>/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
     <script src="<?= base_url() ?>/assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
 
