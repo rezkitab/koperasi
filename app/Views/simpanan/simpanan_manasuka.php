@@ -27,19 +27,22 @@
                     <?php endif; ?>
 
                     <div class="card-body">
-                        <a href="/simpanan/add_manasuka" type="button" class="btn btn-primary btn-sm">Tambah</a>
-                        <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#AmbilUang" type="button" title="Ambil Uang" class="btn btn-warning">
-                            <i class="fa fa-dollar"> Tarik</i>
-                        </button>
-                        <button type="button" class="btn btn-success" id="saldo">
-                            <?php if (!empty($saldo)) { ?>
-                                Saldo: Rp. <?= number_format($saldo[0]->total, 0, ",", ".")  ?>
-                           <?php } else { ?>
-                            Saldo: Rp. 0
-                          <?php } ?>
-                            
-                        </button>
+                        <?php if ($simpanan_wajib != null) { ?>
+                            <a href="/simpanan/add_manasuka" type="button" class="btn btn-primary btn-sm">Tambah</a>
+                            <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#AmbilUang" type="button" title="Ambil Uang" class="btn btn-warning">
+                                <i class="fa fa-dollar"> Tarik</i>
+                            </button>
+                            <button type="button" class="btn btn-success" id="saldo">
+                                <?php if (!empty($saldo)) { ?>
+                                    Saldo: Rp. <?= number_format($saldo[0]->total, 0, ",", ".")  ?>
+                                <?php } else { ?>
+                                    Saldo: Rp. 0
+                                <?php } ?>
 
+                            </button>
+                        <?php } else { ?>
+                            <h7 style="color: #fd2e64; font-weight: bold;">*Segeralah Membayar Simpanan Pokok dan Simpanan Wajib Anda</h7>
+                        <?php } ?>
                         <div class="table-responsive">
                             <br>
                             <table class="display" id="basic-1">
@@ -79,9 +82,9 @@
                                             </td>
 
                                             <td><?php if ($a->status == 2) { ?>
-                                                    <button class="btn btn-info">Pending</button>
+                                                    <span class="badge badge-info">Pending</span>
                                                 <?php } else { ?>
-                                                    <button class="btn btn-warning">Lunas</button>
+                                                    <span class="badge badge-warning">Lunas</span>
                                                 <?php } ?>
                                             </td>
                                             <td><?= $a->jenis ?></td>
@@ -138,7 +141,7 @@
                 <form action="<?= base_url('simpanan/add_riwayat_manasuka'); ?>" class="needs-validation" novalidate="" method="post">
                     <?= csrf_field() ?>
                     <div class="row g-3">
-         
+
                         <div class="col-md-12">
                             <label>Nama Lengkap</label>
                             <input class="form-control" id="nama_pemilik" name="nama_pemilik" type="text" required="">

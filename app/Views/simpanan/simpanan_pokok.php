@@ -46,7 +46,7 @@
                                                                 <?php } ?> membayar simpanan pokok sebesar <b>Rp.100.000</b>. <?php if ($getsimpanan['status'] == 1) { ?>
 
                                                                 <?php } else { ?>
-                                                                    Segeralah Membayar simpanan pokok anda!
+                                                                    Segeralah Membayar Simpanan Pokok Anda!
                                                                 <?php } ?></p>
                                                             <p style="text-align: center">
                                                                 <?php if ($getsimpanan['order_id'] != null) { ?>

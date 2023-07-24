@@ -12,6 +12,7 @@
             </div>
         </div>
     </div>
+ 
     <!-- Container-fluid starts-->
     <div class="container-fluid">
         <div class="row">
@@ -41,11 +42,16 @@
                                             <td><?= $a->tahun ?></td>
                                             <td><?= $a->created_at ?></td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <a href="/simpanan/add_simpanan_wajib/<?= $a->id ?>" type="button" class="btn btn-primary">
-                                                        Bayar
-                                                    </a>
-                                                </div>
+                                                <?php if ($simpanan_pokok['status'] == 1) { ?>
+                                                    <div class="btn-group">
+                                                        <a href="/simpanan/add_simpanan_wajib/<?= $a->id ?>" type="button" class="btn btn-primary">
+                                                            Bayar
+                                                        </a>
+                                                    </div>
+                                                <?php } else { ?>                                                    
+                                                    <h7 style="color: #fd2e64; font-weight: bold;">*Segeralah Membayar Simpanan Pokok Anda</h7>
+                                                <?php } ?>
+
                                             </td>
 
                                         </tr>

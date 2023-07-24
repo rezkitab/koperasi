@@ -22,11 +22,13 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
-                        <?php if (!empty($simpanan)) : ?>
+                        <?php if ($simpanan_wajib != null) : ?>
                             <a href="<?= base_url('pembiayaan/anggota_add') ?>" class="btn btn-primary text-white"><i class="fa fa-plus"></i> Pengajuan</a>
                         <?php else : ?>
-                            <h6 >Silahkan membayar simpanan pokok untuk mengajukan pembiayaan.</h6>
+                          <!-- <h5 >*Silahkan membayar simpanan pokok dan simpanan wajib untuk mengajukan pembiayaan.</h5> -->
+                           <h7 style="color: #fd2e64; font-weight: bold;">*Silahkan membayar simpanan pokok dan simpanan wajib untuk mengajukan pembiayaan.</h7>
                         <?php endif ?>
+                        
                         <div class="table-responsive">
                             <br>
                             <table class="display" id="basic-1">

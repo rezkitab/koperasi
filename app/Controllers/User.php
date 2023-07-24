@@ -7,7 +7,7 @@ use Throwable;
 
 class User extends BaseController
 {
-
+    protected $validation;
     protected $db, $builder, $pengurus, $myConfig;
     public function __construct()
     {
@@ -15,6 +15,7 @@ class User extends BaseController
         $this->builder = $this->db->table('users');
         $this->pengurus = $this->db->table('pengurus');
         $this->myConfig = new MyConfig;
+        $this->validation       =  \Config\Services::validation();
         date_default_timezone_set("Asia/jakarta");
         // $this->gender = $this->db->table('gender');
         // $this->spp_bulanan = $this->db->table('spp_bulanan');
@@ -32,10 +33,17 @@ class User extends BaseController
     public function add()
     {
         // var_dump($data);
-        // die;
+      
         $d = [
             'title' => 'Tambah Data User',
-            'pengurus'  => $this->db->query('SELECT * FROM pengurus')->getResultArray()
+            'pengurus'  => $this->db->query('SELECT * FROM pengurus')->getResultArray(),
+            'validation'        => $this->validation->setRules([
+                "username" => ["label" => " Username", "rules" => "required|min_length[3]|max_length[20]"],
+                "full_name" => ["label" => "Full Name", "rules" => "required|min_length[3]|max_length[40]"],
+                "nik" => ["label" => "Nik", "rules" => "required|min_length[15]|max_length[16]"],
+                "no_hp" => ["label" => "No Hp", "rules" => "required|min_length[10]|max_length[15]"],
+                "password" => ["label" => "Password", "rules" => "required|min_length[4]|max_length[20]"],
+            ])
         ];
         return view('user/add', $d);
     }
@@ -45,17 +53,19 @@ class User extends BaseController
             $this->db = \Config\Database::connect();
             $this->builder = $this->db->table('users');
             // DB Transaction
-            $validation =  \Config\Services::validation();
-            
-            $validation->setRules([
+            $this->validation->setRules([
                 "username" => ["label" => " Username", "rules" => "required|min_length[3]|max_length[20]"],
                 "full_name" => ["label" => "Full Name", "rules" => "required|min_length[3]|max_length[40]"],
-                "nik" => ["label" => "Nik", "rules" => "required|min_length[3]|max_length[20]"],
-                "no_hp" => ["label" => "No Hp", "rules" => "required|min_length[3]|max_length[15]"],
+                "nik" => ["label" => "Nik", "rules" => "required|min_length[15]|max_length[16]"],
+                "no_hp" => ["label" => "No Hp", "rules" => "required|min_length[10]|max_length[15]"],
                 "password" => ["label" => "Password", "rules" => "required|min_length[4]|max_length[20]"],
             ]);
-      
-            if($validation->withRequest($this->request)->run()){
+            $isDataValid = $this->validation->withRequest($this->request)->run();
+            
+
+  
+
+            if ($isDataValid) {
                 $id_user = rand(000, 999);
                 $data = [
                     'id_user' => $id_user,
@@ -93,11 +103,14 @@ class User extends BaseController
                 ];
 
                 $success = $this->db->table('anggota')->insert($anggota);
-            }else{
-                $data["validation"] = $validation->getErrors();
-                return redirect()->to(base_url('/user/add'));
+            } else {
+                $data['validation'] = $this->validation->listErrors();
+                // dd(
+                //     $data
+                // );
+                return redirect()->back()->withInput();
             }
- 
+
             if ($success) {
                 session()->setFlashdata('msg', 'ditambahkan');
                 return redirect()->to(base_url('/user/index'));

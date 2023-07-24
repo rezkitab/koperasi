@@ -29,29 +29,44 @@
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom01">Username</label>
                                     <input class="form-control" id="username" name="username" type="text" required>
-                                    <small class="text-danger"><?= isset($validation) ? $validation['username'] : null;  ?></small>
+                                    <?php if (validation_show_error('username')) : ?>
+                                        <h6><span class="badge bg-danger text-white mt-2"> <?= validation_show_error('username'); ?>
+                                            </span></h6>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label" for="validationCustom02">Nama Lengkap</label>
                                     <input class="form-control" id="full_name" name="full_name" type="text" required>
-                                    <div class="valid-feedback">Looks good!</div>
+                                    <?php if (validation_show_error('full_name')) : ?>
+                                        <h6><span class="badge bg-danger text-white mt-2"> <?= validation_show_error('full_name'); ?>
+                                            </span></h6>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label" for="validationCustomUsername">Password</label>
                                     <div class="input-group">
                                         <input class="form-control" id="password" name="password" type="password" placeholder="*******" aria-describedby="inputGroupPrepend" required="">
-                                        <div class="valid-feedback">Looks good!</div>
+                                        <?php if (validation_show_error('password')) : ?>
+                                            <h6><span class="badge bg-danger text-white mt-2"> <?= validation_show_error('password'); ?>
+                                                </span></h6>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom02">Nik</label>
-                                    <input class="form-control" id="nik" name="nik" type="text" required>
-                                    <div class="valid-feedback">Looks good!</div>
+                                    <input class="form-control" id="nik" name="nik" type="text" maxlength="16" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                                    <?php if (validation_show_error('nik')) : ?>
+                                        <h6><span class="badge bg-danger text-white mt-2"> <?= validation_show_error('nik'); ?>
+                                            </span></h6>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom02">Telepon</label>
-                                    <input class="form-control" id="no_hp" name="no_hp" type="text" required>
-                                    <div class="valid-feedback">Looks good!</div>
+                                    <input class="form-control" id="no_hp" name="no_hp" maxlength="15" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                                    <?php if (validation_show_error('no_hp')) : ?>
+                                        <h6><span class="badge bg-danger text-white mt-2"> <?= validation_show_error('no_hp'); ?>
+                                            </span></h6>
+                                    <?php endif; ?>
                                 </div>
                                 <hr>
                                 <!-- <div class="col-md-4">
@@ -76,7 +91,7 @@
                             </div>
 
                             <br>
-                            <button class="btn btn-primary" type="submit">Tambah</button>
+                            <button class="btn btn-primary" type="submit" onclick="getValue()">Tambah</button>
                         </form>
                     </div>
                 </div>
@@ -84,5 +99,6 @@
         </div>
     </div>
 </div>
+
 
 <?= $this->endsection(); ?>

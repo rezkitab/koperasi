@@ -3,7 +3,7 @@
     <div class="page-main-header">
         <div class="main-header-right row m-0">
             <div class="main-header-left">
-                <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="<?= base_url('assets/foto/logo/kas.jpeg') ?>" alt="" style="width: 50px; height: 50px"></a></div>
+                <div class="logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="<?= base_url('assets/foto/logo/kass.png') ?>" alt="" style="width: 50px; height: 50px"></a></div>
                 <div class="dark-logo-wrapper"><a href="<?= base_url() ?>"><img class="img-fluid" src="<?= base_url('assets/images/logo/dark-logo.png') ?>" alt=""></a></div>
                 <!-- <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i></div> -->
             </div>

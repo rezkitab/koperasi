@@ -14,6 +14,7 @@ class Pembiayaan extends BaseController
     protected $pembiayaanModel;
     protected $userModel;
     protected $jurnal_umum;
+    protected $db;
 
     public function __construct()
     {
@@ -22,6 +23,7 @@ class Pembiayaan extends BaseController
         $this->session                  = \Config\Services::session();
         $this->pembiayaanModel          = new PembiayaanModel();
         $this->userModel                = new UserModel();
+        $this->db = \Config\Database::connect();
     }
 
     public function index()
@@ -282,7 +284,8 @@ class Pembiayaan extends BaseController
         $data = [
             'title'                     => 'Data Pembiayaan',
             'pembiayaan'                => $this->pembiayaanModel->getPembiayaanAnggota($this->session->get('id_user')),
-            'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user'))
+            'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user')),
+            'simpanan_wajib'            => $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray(),
         ];
 
         return view('pembiayaan/anggota_view_data_pembiayaan', $data);

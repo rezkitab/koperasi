@@ -231,7 +231,10 @@ class Simpanan extends BaseController
     public function simpanan_wajib()
     {
         $simpanan_wajib  = $this->db->query('SELECT * FROM simpanan_wajib sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getResult();
-        $d = ['title' => 'Simpanan Wajib', 'simpanan_wajib' => $simpanan_wajib];
+        $simpanan_pokok  = $this->db->query('SELECT * FROM simpanan_pokok sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray();
+        // var_dump($simpanan_pokok);
+        // die;
+        $d = ['title' => 'Simpanan Wajib', 'simpanan_wajib' => $simpanan_wajib, 'simpanan_pokok' => $simpanan_pokok];
         return view('simpanan/simpanan_wajib', $d);
     }
     public function simpanan_manasuka()
@@ -240,9 +243,11 @@ class Simpanan extends BaseController
         $saldo  = $this->db->query('SELECT ((SELECT SUM(sk.nominal) FROM simpanan_manasuka sk WHERE sk.id_user = ' . $this->session->get('id_user') . ' and sk.status = 1) - 
         (SELECT SUM(su.nominal_tarik) FROM simpanan_manasuka su WHERE su.id_user = ' . $this->session->get('id_user') . ')) as total FROM simpanan_manasuka sm 
         left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . ' and status = 1 GROUP BY sm.id_user')->getResult();
-        // var_dump($simpanan_manasuka);
+        
+        $simpanan_wajib  = $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray();
+        // var_dump($simpanan_wajib);
         // die;
-        $d = ['title' => 'Simpanan Manasuka', 'simpanan_manasuka' => $simpanan_manasuka, 'saldo' => $saldo];
+        $d = ['title' => 'Simpanan Manasuka', 'simpanan_manasuka' => $simpanan_manasuka, 'saldo' => $saldo,  'simpanan_wajib' => $simpanan_wajib];
         return view('simpanan/simpanan_manasuka', $d);
     }
     public function add_manasuka()
