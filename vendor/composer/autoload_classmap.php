@@ -289,6 +289,7 @@ return array(
     'PHPUnit\\TextUI\\XmlConfiguration\\Migrator' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrator.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromFilterWhitelistToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveAttributesFromFilterWhitelistToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveAttributesFromRootToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveAttributesFromRootToCoverage.php',
+    'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistDirectoriesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistDirectoriesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistExcludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistExcludesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\MoveWhitelistIncludesToCoverage' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/Migration/Migrations/MoveWhitelistIncludesToCoverage.php',
     'PHPUnit\\TextUI\\XmlConfiguration\\PHPUnit' => $vendorDir . '/phpunit/phpunit/src/TextUI/XmlConfiguration/PHPUnit/PHPUnit.php',

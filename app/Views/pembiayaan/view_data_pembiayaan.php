@@ -77,7 +77,7 @@
                                             </td>
                                             <td>
                                                 <?php if ($data['status_pembiayaan'] == 'Menunggu Persetujuan') : ?>
-                                                    <a data-bs-toggle="modal" data-bs-target="#update<?= $data['id']; ?>" type="button" class="btn btn-info btn-sm">
+                                                    <a href="<?= base_url('pembiayaan/detail_pengajuan/' . $data['id']) ?>" type="button" class="btn btn-info btn-sm">
                                                         <i class="fa fa-eye"></i>
                                                     </a>
                                                 <?php elseif ($data['status_pembiayaan'] == 'Ditolak') : ?>

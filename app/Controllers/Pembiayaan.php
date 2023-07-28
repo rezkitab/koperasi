@@ -117,6 +117,17 @@ class Pembiayaan extends BaseController
         }
     }
 
+    public function detail_pengajuan($id)
+    {
+        $data = [
+            'title'                 => 'Data Detail Pembiayaan',
+            'pembiayaan'             => $this->pembiayaanModel->where('id', $id)->join('users', 'users.id_user=pembiayaan.user_id')->first(),
+            'detail_pembiayaan'      => $this->pembiayaanModel->getDetailPembiayaan($id)
+        ];
+
+        return view('pembiayaan/view_data_detail_pengajuan',$data);
+    }
+
     public function detail($id)
     {
         $data = [
