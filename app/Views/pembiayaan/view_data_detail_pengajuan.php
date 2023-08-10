@@ -163,11 +163,11 @@
                             <a href="<?= base_url('pembiayaan') ?>" class="btn btn-secondary btn-sm" type="button">Kembali</a>
                             <?php if ($pembiayaan['status_pembiayaan'] != 'Menunggu Persetujuan Anggota') : ?>
                                 <form action="<?= base_url('pembiayaan/tolak') ?>" method="post" class="form-inline">
-                                    <input type="hidden" name="id" value="<?= $data['id']; ?>">
+                                    <input type="hidden" name="id" value="<?= $pembiayaan['id']; ?>">
                                     <button type="submit" class="btn btn-sm btn-danger">Tolak</button>
                                 </form>
                                 <form action="<?= base_url('pembiayaan/setujui') ?>" method="post" class="form-inline">
-                                    <input type="hidden" name="id" value="<?= $data['id']; ?>">
+                                    <input type="hidden" name="id" value="<?= $pembiayaan['id']; ?>">
                                     <button type="submit" class="btn btn-sm btn-primary">Setujui</button>
                                 </form>
                             <?php endif; ?>

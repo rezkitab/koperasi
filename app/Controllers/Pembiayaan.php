@@ -54,9 +54,10 @@ class Pembiayaan extends BaseController
             'user_id'                   => $this->request->getPost('user_id'),
             'tgl_pembiayaan'            => date('Y-m-d'),
             'jenis_pembiayaan'          => $this->request->getPost('jenis_pembiayaan'),
+            'nama_barang'               => $this->request->getPost('nama_barang'),
             'jumlah_pembiayaan'         => replace_nominal($this->request->getPost('jumlah_pembiayaan')),
             'angsuran'                  => $this->request->getPost('angsuran'),
-            'margin'                    => 10,
+            'margin'                    => 5,
             'biaya_administrasi'        => 340000,
             'total_angsuran'            => replace_nominal($this->request->getPost('total_angsuran')),
             'total_pembiayaan'          => replace_nominal($this->request->getPost('total_pembiayaan')),
@@ -95,7 +96,35 @@ class Pembiayaan extends BaseController
 
         $check = $this->pembiayaanModel->updateDetailPembiayaan($update, $pembiayaan->id);
 
-        if ($check) {
+            $tanggal                = date('Y-m-d');
+            $periode                = set_periode($tanggal);
+    
+            $jurnal_angsuran = [
+                [
+                    'tanggal'       => date('Y-m-d'),
+                    'periode'       => $periode,
+                    'kode_akun'     => '1102',
+                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
+                    'dc'            => 'd',
+                    'nominal'       => replace_nominal($jumlah_angsuran),
+                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+                ],
+                [
+                    'tanggal'       => date('Y-m-d'),
+                    'periode'       => $periode,
+                    'kode_akun'     => '1103',
+                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
+                    'dc'            => 'c',
+                    'nominal'       => replace_nominal($jumlah_angsuran),
+                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+                ],
+            ];
+    
+            $this->jurnalModel->insertBatch($jurnal_angsuran);
+
+            if ($check) {
 
             $check_status = $this->pembiayaanModel->getDetailBayar($id_pembiayaan);
 
@@ -117,17 +146,6 @@ class Pembiayaan extends BaseController
         }
     }
 
-    public function detail_pengajuan($id)
-    {
-        $data = [
-            'title'                 => 'Data Detail Pembiayaan',
-            'pembiayaan'             => $this->pembiayaanModel->where('id', $id)->join('users', 'users.id_user=pembiayaan.user_id')->first(),
-            'detail_pembiayaan'      => $this->pembiayaanModel->getDetailPembiayaan($id)
-        ];
-
-        return view('pembiayaan/view_data_detail_pengajuan',$data);
-    }
-
     public function detail($id)
     {
         $data = [
@@ -143,6 +161,50 @@ class Pembiayaan extends BaseController
         }
 
         return view('pembiayaan/view_data_detail_pembiayaan', $data);
+    }
+
+    public function detail_pengajuan($id)
+    {
+        $data = [
+            'title'                 => 'Data Detail Pembiayaan',
+            'pembiayaan'             => $this->pembiayaanModel->where('id', $id)->join('users', 'users.id_user=pembiayaan.user_id')->first(),
+            'detail_pembiayaan'      => $this->pembiayaanModel->getDetailPembiayaan($id)
+        ];
+
+        return view('pembiayaan/view_data_detail_pengajuan', $data);
+    }
+
+    public function update_pengajuan()
+    {
+        $pembiayaan_id                   = $this->request->getPost('pembiayaan_id');
+
+        $data_pembiayaan = array(
+            'angsuran'                  => $this->request->getPost('angsuran'),
+            'margin'                    => $this->request->getPost('margin'),
+            'biaya_administrasi'        => replace_nominal($this->request->getPost('biaya_administrasi')),
+            'total_angsuran'            => replace_nominal($this->request->getPost('total_angsuran')),
+            'total_pembiayaan'          => replace_nominal($this->request->getPost('total_pembiayaan')),
+            'status_pembiayaan'         => 'Menunggu Persetujuan Anggota',
+        );
+
+        $this->pembiayaanModel->updatePembiayaan($data_pembiayaan, $pembiayaan_id);
+
+        $data_detail_pembiayaan          = [];
+        for ($i = 1; $i <= $this->request->getPost('angsuran'); $i++) :
+            $data_detail_pembiayaan[] = [
+                'pembiayaan_id'         => $pembiayaan_id,
+                'angsuran_ke'           => $i,
+                'jumlah_angsuran'       => replace_nominal($this->request->getPost('total_angsuran')),
+                'status'                => 'Belum Dibayar',
+            ];
+        endfor;
+
+        if ($this->pembiayaanModel->deleteDetailPembiayaan($pembiayaan_id)) {
+            $this->pembiayaanModel->createDetailPembiayaan($data_detail_pembiayaan);
+        }
+
+        session()->setFlashdata('success', 'Data Pengajuan Berhasil Diperbaharui');
+        return redirect()->back();
     }
 
     public function print_angsuran($id)
@@ -174,6 +236,124 @@ class Pembiayaan extends BaseController
 
 
         $this->pembiayaanModel->updatePembiayaan($update, $id_pembiayaan);
+        $pembiayaan             = $this->pembiayaanModel->getDetailPembiayaanBayar($id_pembiayaan);
+
+        $angsuran               = $pembiayaan->jumlah_pembiayaan / $pembiayaan->angsuran;
+        $margin                 = $pembiayaan->jumlah_angsuran - $angsuran;
+
+        $tanggal                = date('Y-m-d');
+        $periode                = set_periode($tanggal);
+
+        // Jurnal Pembelian Barang:
+        $jurnal_pembelian = [
+            [
+                // Pembelian Dagang Barang
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => '1104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
+            ],
+            [
+                // Bank 
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => '1102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
+            ],
+        ];
+        $this->jurnalModel->insertBatch($jurnal_pembelian);
+
+
+        // Jurnal Saat Akad Murabahah Berlangsung (Tanpa DP):
+        $jurnal_akad = [
+            [
+                // Bank 
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $margin + $pembiayaan->biaya_administrasi,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Pendapatan Adm Akad Murabahah 
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->biaya_administrasi,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Margin murabahah   
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4103',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $margin,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Piutang Anggota    
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1103',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->total_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Pendapatan Akad Murabahah    
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->total_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Harga Pokok Penjualan     
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '5101',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Persediaan Barang Dagang      
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+        ];
+
+        $this->jurnalModel->insertBatch($jurnal_akad);
 
         session()->setFlashdata('success', 'Data Pengajuan Pembiayaan Disetujui');
         return redirect('pembiayaan');
@@ -261,6 +441,13 @@ class Pembiayaan extends BaseController
 
             $pembiayaan_id                  = $this->request->getPost('pembiayaan_id');
             $pembiayaan                     = $this->pembiayaanModel->getDetailPembiayaanBayar($pembiayaan_id);
+            $kode_pembiayaan                = $this->pembiayaanModel->where('id', $pembiayaan_id)->get()->getFirstRow();
+
+            if ($pembiayaan->angsuran_ke == 1) {
+                $pembayaran = (int)$pembiayaan->jumlah_angsuran + (int)$pembiayaan->biaya_administrasi;
+            } else {
+                $pembayaran = (int)$pembiayaan->jumlah_angsuran;
+            }
 
             $data_pembiayaan = array(
                 'tgl_pembayaran'            => date('Y-m-d'),
@@ -277,6 +464,34 @@ class Pembiayaan extends BaseController
             );
 
             $this->pembiayaanModel->updateDetailPembiayaan($data_pembiayaan, $pembiayaan->id);
+            
+            $tanggal                = date('Y-m-d');
+            $periode                = set_periode($tanggal);
+
+            $jurnal_angsuran = [
+                [
+                    'tanggal'       => date('Y-m-d'),
+                    'periode'       => $periode,
+                    'kode_akun'     => '1102',
+                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke . '-Online',
+                    'dc'            => 'd',
+                    'nominal'       => replace_nominal($pembayaran),
+                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+                ],
+                [
+                    'tanggal'       => date('Y-m-d'),
+                    'periode'       => $periode,
+                    'kode_akun'     => '1103',
+                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke . '-Online',
+                    'dc'            => 'c',
+                    'nominal'       => replace_nominal($pembayaran),
+                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+                ],
+            ];
+
+            $this->jurnalModel->insertBatch($jurnal_angsuran);
 
             $json = [
                 'success'                   => 'Data Berhasil Disimpan',
@@ -298,7 +513,6 @@ class Pembiayaan extends BaseController
             'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user')),
             'simpanan_wajib'            => $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray(),
         ];
-
         return view('pembiayaan/anggota_view_data_pembiayaan', $data);
     }
 
@@ -311,8 +525,19 @@ class Pembiayaan extends BaseController
         ];
 
         $detail_pembiayaan = $this->pembiayaanModel->getStatusPembiayaan();
+
         if (isset($detail_pembiayaan)) {
             $this->update_status();
+        }
+
+        $check_status = $this->pembiayaanModel->getDetailBayar($id);
+
+        if ($check_status === null) {
+            $update_status = array(
+                'tgl_pelunasan'     => date('Y-m-d'),
+                'status'            => 'Lunas',
+            );
+            $this->pembiayaanModel->updatePembiayaan($update_status,  $id);
         }
 
         return view('pembiayaan/anggota_view_data_detail_pembiayaan', $data);
@@ -339,10 +564,11 @@ class Pembiayaan extends BaseController
                 'kode_pembiayaan'           => $this->request->getPost('kode_pembiayaan'),
                 'user_id'                   => $this->session->get('id_user'),
                 'tgl_pembiayaan'            => date('Y-m-d'),
+                'nama_barang'               => $this->request->getPost('nama_barang'),
                 'jenis_pembiayaan'          => $this->request->getPost('jenis_pembiayaan'),
                 'jumlah_pembiayaan'         => replace_nominal($this->request->getPost('jumlah_pembiayaan')),
                 'angsuran'                  => $this->request->getPost('angsuran'),
-                'margin'                    => 10,
+                'margin'                    => 5,
                 'biaya_administrasi'        => 340000,
                 'total_angsuran'            => replace_nominal($this->request->getPost('total_angsuran')),
                 'total_pembiayaan'          => replace_nominal($this->request->getPost('total_pembiayaan')),
@@ -373,6 +599,153 @@ class Pembiayaan extends BaseController
             session()->setFlashdata('error', 'Gagal, Pembiayaan Sebelumnya Belum Disetujui');
             return redirect()->to('pembiayaan/anggota');
         }
+    }
+
+    public function setujui_anggota()
+    {
+        $id_pembiayaan                  = $this->request->getPost('id');
+
+
+        $update = array(
+            'status_pembiayaan'         => 'Disetujui',
+        );
+
+        $this->pembiayaanModel->updatePembiayaan($update, $id_pembiayaan);
+        $pembiayaan             = $this->pembiayaanModel->getDetailPembiayaanBayar($id_pembiayaan);
+
+        $angsuran               = $pembiayaan->jumlah_pembiayaan / $pembiayaan->angsuran;
+        $margin                 = $pembiayaan->jumlah_angsuran - $angsuran;
+
+        $tanggal                = date('Y-m-d');
+        $periode                = set_periode($tanggal);
+
+        // Jurnal Pembelian Barang:
+        $jurnal_pembelian = [
+            [
+                // Pembelian Dagang Barang
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => '1104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
+            ],
+            [
+                // Bank 
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => '1102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
+            ],
+        ];
+        $this->jurnalModel->insertBatch($jurnal_pembelian);
+
+
+        // Jurnal Saat Akad Murabahah Berlangsung (Tanpa DP):
+        $jurnal_akad = [
+            [
+                // Bank 
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $margin + $pembiayaan->biaya_administrasi,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Pendapatan Adm Akad Murabahah 
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->biaya_administrasi,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Margin murabahah   
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4103',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $margin,
+                'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
+            ],
+            [
+                // Piutang Anggota    
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1103',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->total_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Pendapatan Akad Murabahah    
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '4102',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->total_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Harga Pokok Penjualan     
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '5101',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'd',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+            [
+                // Persediaan Barang Dagang      
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1104',
+                'deskripsi'     => 'Pembiayaan Akad Murabahah',
+                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'dc'            => 'c',
+                'nominal'       => $pembiayaan->jumlah_pembiayaan,
+                'trans_ref'     => 'PEMBIAYAAN'
+            ],
+        ];
+
+        $this->jurnalModel->insertBatch($jurnal_akad);
+
+        session()->setFlashdata('success', 'Data Pengajuan Pembiayaan Disetujui');
+        return redirect('pembiayaan/anggota');
+    }
+
+    public function tolak_anggota()
+    {
+        $id_pembiayaan                  = $this->request->getPost('id');
+
+        $update = array(
+            'status_pembiayaan'         => 'Ditolak',
+        );
+
+        $this->pembiayaanModel->updatePembiayaan($update, $id_pembiayaan);
+
+        session()->setFlashdata('success', 'Data Pengajuan Pembiayaan Ditolak');
+        return redirect('pembiayaan/anggota');
     }
 
     public function update_status()
@@ -409,7 +782,6 @@ class Pembiayaan extends BaseController
             }
 
             $this->pembiayaanModel->updateDataAngsuran($update_status, $detail_pembiayaan[$i]['order_id']);
-
         endfor;
     }
 }

@@ -120,8 +120,11 @@ $routes->group('/', ['filter' => 'auth'], function ($routes) {
     $routes->get('pembiayaan/add', 'Pembiayaan::add');
     $routes->post('/piutang/update', 'Piutang::update');
     $routes->get('/pembiayaan/detail/(:any)', 'Pembiayaan::detail/$1');
+    $routes->get('/pembiayaan/detail_pengajuan/(:any)', 'Pembiayaan::detail_pengajuan/$1');
     $routes->get('/pembiayaan/print-angsuran/(:any)', 'Pembiayaan::print_angsuran/$1');
     $routes->post('pembiayaan/fetch_anggota', 'Pembiayaan::fetch_anggota');
+    $routes->post('pembiayaan/update_status', 'Pembiayaan::update_status');
+    $routes->post('pembiayaan/update_pengajuan', 'Pembiayaan::update_pengajuan');
     $routes->get('/pembiayaan/payment', 'Pembiayaan::payment');
     $routes->get('/pembiayaan/payment', 'Pembiayaan::payment');
     $routes->post('/pembiayaan/finishPayment', 'Pembiayaan::finishPayment');
@@ -130,6 +133,8 @@ $routes->group('/', ['filter' => 'auth'], function ($routes) {
     $routes->post('/pembiayaan/finishPayment_anggota', 'Pembiayaan::finishPayment_anggota');
     $routes->post('pembiayaan/setujui', 'Pembiayaan::setujui');
     $routes->post('pembiayaan/tolak', 'Pembiayaan::tolak');
+    $routes->post('pembiayaan/setujui_anggota', 'Pembiayaan::setujui_anggota');
+    $routes->post('pembiayaan/tolak_anggota', 'Pembiayaan::tolak_anggota');
 
     // <!-- PEMBIAYAAN ANGGOTA ---!> 
     $routes->get('pembiayaan/anggota', 'Pembiayaan::anggota');

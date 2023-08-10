@@ -148,6 +148,7 @@
                                 </div>
                             </div>
                         </form>
+                        <span>"margin, biaya adm dan jumlah angsuran mungkin saja berubah tergantung dengan nominal pembiayaan yang diajukan dan disesuaikan dengan kebijakan koperasi dan anggota berhak membatalkan pengajuan jikalau perubahan dari pengajuan awal tidak sesuai dengan harapan"</span>
                     </div>
                 </div>
             </div>
@@ -205,7 +206,7 @@
             var angsuran = $('#angsuran').val();
             var jumlah_pembiayaan = $('#jumlah_pembiayaan').val().replaceAll(".", "");
             var biaya_administrasi = 340000;
-            var margin = 0.1;
+            var margin = 0.05;
             var angsuran_pokok = parseInt(jumlah_pembiayaan) / parseInt(angsuran);
             var nilai_margin = angsuran_pokok * margin;
             // var nilai_administrasi = biaya_administrasi / angsuran;
@@ -219,7 +220,7 @@
             var angsuran = $('#angsuran').val();
             var jumlah_pembiayaan = $('#jumlah_pembiayaan').val().replaceAll(".", "");
             var biaya_administrasi = 340000;
-            var margin = 0.1;
+            var margin = 0.5;
             var angsuran_pokok = parseInt(jumlah_pembiayaan) / parseInt(angsuran);
             var nilai_margin = angsuran_pokok * margin;
             // var nilai_administrasi = biaya_administrasi / angsuran;

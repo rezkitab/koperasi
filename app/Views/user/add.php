@@ -91,7 +91,7 @@
                             </div>
 
                             <br>
-                            <button class="btn btn-primary" type="submit" onclick="getValue()">Tambah</button>
+                            <button class="btn btn-primary" type="submit" onclick="getValue()">Simpan</button>
                         </form>
                     </div>
                 </div>

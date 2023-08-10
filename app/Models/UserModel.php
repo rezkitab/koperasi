@@ -22,9 +22,9 @@ class UserModel extends Model
     public function getAnggotaPembiayaan()
     {
         $builder = $this->db->table('users');
-        $builder->select('users.*,simpanan_pokok.status');
-        $builder->join('simpanan_pokok', 'simpanan_pokok.id_user=users.id_user');
-        $builder->where('simpanan_pokok.status', '1');
+        $builder->select('users.*');
+        $builder->join('simpanan_wajib', 'simpanan_wajib.id_user=users.id_user');
+        $builder->groupBy('simpanan_wajib.id_user');
         $query   = $builder->get();
         return $query->getResultArray();
     }

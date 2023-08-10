@@ -24,9 +24,8 @@ class PembiayaanModel extends Model
 
     public function getStatusSimpanan($id_user)
     {
-        $builder = $this->db->table('simpanan_pokok');
+        $builder = $this->db->table('simpanan_wajib');
         $builder->where('id_user', $id_user);
-        $builder->where('status', 1);
         $query = $builder->get()->getFirstRow();
         return $query;
     }
@@ -210,6 +209,12 @@ class PembiayaanModel extends Model
     public function deletePembiayaan($id)
     {
         $query = $this->db->table('pembiayaan')->delete(array('id' => $id));
+        return $query;
+    }
+
+    public function deleteDetailPembiayaan($id)
+    {
+        $query = $this->db->table('detail_pembiayaan')->delete(array('pembiayaan_id' => $id));
         return $query;
     }
 }

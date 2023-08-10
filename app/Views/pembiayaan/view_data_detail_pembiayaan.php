@@ -171,10 +171,10 @@
                                             <div class="col-sm-12">
                                                 <?php if ($detail_pembiayaan[0]['status'] == 'Belum Dibayar') : ?>
                                                     <input type="hidden" name="angsuran_ke" value="1">
-                                                    <input class="form-control form-control-sm" type="text" readonly value="<?= nominal($data['jumlah_angsuran'] + $pembiayaan['biaya_administrasi']) ?>">
+                                                    <input class="form-control form-control-sm" type="text" name="jumlah_angsuran" readonly value="<?= nominal_($data['jumlah_angsuran'] + $pembiayaan['biaya_administrasi']) ?>">
                                                 <?php else : ?>
                                                     <input type="hidden" name="angsuran_ke" value="<?= $data['angsuran_ke'] ?>">
-                                                    <input class="form-control form-control-sm" type="text" readonly value="<?= nominal($data['jumlah_angsuran']) ?>">
+                                                    <input class="form-control form-control-sm" type="text" name="jumlah_angsuran" readonly value="<?= nominal_($data['jumlah_angsuran']) ?>">
                                                 <?php endif; ?>
                                             </div>
                                         </div>

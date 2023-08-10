@@ -121,10 +121,22 @@
                             <!-- End InvoiceBot-->
                         </div>
                         <div class="col-sm-12 text-center mt-3">
-                            <!-- <button class="btn btn btn-primary me-2" type="button" onclick="myFunction()" data-bs-original-title="" title="">Print</button> -->
-                            <button class="btn btn-sm btn-info" onClick="window.location.reload();">Sync</button>
                             <a href="<?= base_url('pembiayaan/anggota') ?>" class="btn btn-secondary btn-sm" type="button">Kembali</a>
-                            <button type="button" class="btn btn-info btn-sm online" id="pay-button"> Bayar </button>
+                            <?php if ($pembiayaan['status_pembiayaan'] == 'Menunggu Persetujuan Anggota') : ?>
+                                <form action="<?= base_url('pembiayaan/tolak_anggota') ?>" method="post" class="form-inline">
+                                    <input type="hidden" name="id" value="<?= $data['pembiayaan_id']; ?>">
+                                    <button type="submit" class="btn btn-sm btn-danger">Tolak</button>
+                                </form>
+                                <form action="<?= base_url('pembiayaan/setujui_anggota') ?>" method="post" class="form-inline">
+                                    <input type="hidden" name="id" value="<?= $data['pembiayaan_id']; ?>">
+                                    <button type="submit" class="btn btn-sm btn-primary">Setujui</button>
+                                </form>
+                            <?php else : ?>
+                                <?php if ($pembiayaan['status'] != 'Lunas') {  ?>
+                                    <button class="btn btn-sm btn-info" onClick="window.location.reload();">Sync</button>
+                                    <button type="button" class="btn btn-info btn-sm online" id="pay-button"> Bayar </button>
+                                <?php } ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

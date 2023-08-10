@@ -56,7 +56,7 @@
 
                             </div>
                             <br>
-                            <button class="btn btn-primary" style="margin-left: 85%;" type="submit">Update</button>
+                            <button class="btn btn-primary" style="margin-left: 85%;" type="submit">Simpan</button>
                         </form>
                     </div>
                 </div>

@@ -74,11 +74,11 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Anggota</th>
+                                        <th>Barang</th>
                                         <th>Jumlah Pembiayaan</th>
                                         <th>Total Pembiayaan</th>
                                         <th>Angsuran ke</th>
                                         <th>Jumlah Angsuran</th>
-                                        <th>Sisa Saldo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,11 +90,11 @@
                                         <tr>
                                             <th><?= $no++ ?></th>
                                             <td><?= $data['full_name'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= nominal($data['jumlah_pembiayaan']) ?></td>
                                             <td><?= nominal($data['total_pembiayaan']) ?> </td>
                                             <td><?= $data['angsuran_ke'] ?> </td>
                                             <td><?= nominal($data['jumlah_angsuran']) ?></td>
-                                            <td><?= nominal($saldo_pembiayaan) ?></td>
                                         </tr>
                                     <?php endforeach ?>
                                 </tbody>

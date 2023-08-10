@@ -31,6 +31,7 @@
                                         <th class="text-center">No</th>
                                         <th>Kode Pembiayaan</th>
                                         <th>Tgl Pembiayaan</th>
+                                        <th>Anggota</th>
                                         <th>Jumlah Pembiayaan</th>
                                         <th>Margin</th>
                                         <th>Biaya Administrasi</th>
@@ -48,6 +49,7 @@
                                             <th class="text-center"><?= $no++ ?></th>
                                             <td><?= $data['kode_pembiayaan'] ?></td>
                                             <td><?= $data['tgl_pembiayaan'] ?></td>
+                                            <td><?= $data['full_name'] ?></td>
                                             <td><?= nominal($data['jumlah_pembiayaan']) ?></td>
                                             <td><?= $data['margin'] ?> %</td>
                                             <td><?= nominal($data['biaya_administrasi']) ?></td>
@@ -78,7 +80,7 @@
                                             <td>
                                                 <?php if ($data['status_pembiayaan'] == 'Menunggu Persetujuan') : ?>
                                                     <a href="<?= base_url('pembiayaan/detail_pengajuan/' . $data['id']) ?>" type="button" class="btn btn-info btn-sm">
-                                                        <i class="fa fa-eye"></i>
+                                                        <i class="fa fa-eye"> </i>
                                                     </a>
                                                 <?php elseif ($data['status_pembiayaan'] == 'Ditolak') : ?>
 
