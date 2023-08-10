@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Models\Laporan\JurnalUmum;
 use Config\MyConfig;
 use App\Models\PembiayaanModel;
 use App\Models\UserModel;
+use App\Models\Laporan\JurnalUmum;
 
 class Pembiayaan extends BaseController
 {
@@ -13,8 +13,7 @@ class Pembiayaan extends BaseController
     protected $session;
     protected $pembiayaanModel;
     protected $userModel;
-    protected $jurnal_umum;
-    protected $db;
+    protected $jurnalModel;
 
     public function __construct()
     {
@@ -23,7 +22,7 @@ class Pembiayaan extends BaseController
         $this->session                  = \Config\Services::session();
         $this->pembiayaanModel          = new PembiayaanModel();
         $this->userModel                = new UserModel();
-        $this->db = \Config\Database::connect();
+        $this->jurnalModel              = new JurnalUmum();
     }
 
     public function index()
@@ -86,45 +85,47 @@ class Pembiayaan extends BaseController
 
     public function update()
     {
-        $id_pembiayaan                  = $this->request->getPost('id');
-        $pembiayaan                     = $this->pembiayaanModel->getDetailBayar($id_pembiayaan);
+        $id_pembiayaan          = $this->request->getPost('id');
+        $jumlah_angsuran        = $this->request->getPost('jumlah_angsuran');
+        $pembiayaan             = $this->pembiayaanModel->getDetailBayar($id_pembiayaan);
+        $kode_pembiayaan        = $this->pembiayaanModel->where('id', $id_pembiayaan)->get()->getFirstRow();
 
         $update = array(
-            'tgl_pembayaran'            => date('Y-m-d'),
-            'status'                    => 'Sudah Dibayar',
+            'tgl_pembayaran'    => date('Y-m-d'),
+            'status'            => 'Sudah Dibayar',
         );
 
         $check = $this->pembiayaanModel->updateDetailPembiayaan($update, $pembiayaan->id);
 
-            $tanggal                = date('Y-m-d');
-            $periode                = set_periode($tanggal);
-    
-            $jurnal_angsuran = [
-                [
-                    'tanggal'       => date('Y-m-d'),
-                    'periode'       => $periode,
-                    'kode_akun'     => '1102',
-                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
-                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
-                    'dc'            => 'd',
-                    'nominal'       => replace_nominal($jumlah_angsuran),
-                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
-                ],
-                [
-                    'tanggal'       => date('Y-m-d'),
-                    'periode'       => $periode,
-                    'kode_akun'     => '1103',
-                    'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
-                    'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
-                    'dc'            => 'c',
-                    'nominal'       => replace_nominal($jumlah_angsuran),
-                    'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
-                ],
-            ];
-    
-            $this->jurnalModel->insertBatch($jurnal_angsuran);
+        $tanggal                = date('Y-m-d');
+        $periode                = set_periode($tanggal);
 
-            if ($check) {
+        $jurnal_angsuran = [
+            [
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1102',
+                'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
+                'dc'            => 'd',
+                'nominal'       => replace_nominal($jumlah_angsuran),
+                'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+            ],
+            [
+                'tanggal'       => date('Y-m-d'),
+                'periode'       => $periode,
+                'kode_akun'     => '1103',
+                'deskripsi'     => 'Pembiayaan Pembayaran Angsuran',
+                'no_bukti'      => $kode_pembiayaan->kode_pembiayaan . '-Angs-' . $pembiayaan->angsuran_ke,
+                'dc'            => 'c',
+                'nominal'       => replace_nominal($jumlah_angsuran),
+                'trans_ref'     => 'PEMBIAYAAN PEMBAYARAN ANGSURAN'
+            ],
+        ];
+
+        $this->jurnalModel->insertBatch($jurnal_angsuran);
+
+        if ($check) {
 
             $check_status = $this->pembiayaanModel->getDetailBayar($id_pembiayaan);
 
@@ -230,10 +231,10 @@ class Pembiayaan extends BaseController
     {
         $id_pembiayaan                  = $this->request->getPost('id');
 
+
         $update = array(
             'status_pembiayaan'         => 'Disetujui',
         );
-
 
         $this->pembiayaanModel->updatePembiayaan($update, $id_pembiayaan);
         $pembiayaan             = $this->pembiayaanModel->getDetailPembiayaanBayar($id_pembiayaan);
@@ -269,6 +270,7 @@ class Pembiayaan extends BaseController
                 'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
             ],
         ];
+
         $this->jurnalModel->insertBatch($jurnal_pembelian);
 
 
@@ -464,7 +466,7 @@ class Pembiayaan extends BaseController
             );
 
             $this->pembiayaanModel->updateDetailPembiayaan($data_pembiayaan, $pembiayaan->id);
-            
+
             $tanggal                = date('Y-m-d');
             $periode                = set_periode($tanggal);
 
@@ -503,15 +505,13 @@ class Pembiayaan extends BaseController
     }
 
 
-
     // ANGGOTA 
     public function anggota()
     {
         $data = [
             'title'                     => 'Data Pembiayaan',
             'pembiayaan'                => $this->pembiayaanModel->getPembiayaanAnggota($this->session->get('id_user')),
-            'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user')),
-            'simpanan_wajib'            => $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray(),
+            'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user'))
         ];
         return view('pembiayaan/anggota_view_data_pembiayaan', $data);
     }

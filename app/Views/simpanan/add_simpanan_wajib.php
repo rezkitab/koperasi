@@ -83,11 +83,11 @@
                                 <div class="valid-feedback">Looks good!</div>
                             </select>
                             <br>
-                            <select class="form-control" title="Nominal" name="" id="" required>
+                            <select class="form-control" id="pilih-nominal" title="Nominal" name="" required>
                                 <option selected disabled>Pilih Nominal</option>
-                                <option value="50000" onclick="getNilai(this.value)" readonly>Rp.50.000</option>
-                                <option value="100000" onclick="getNilai(this.value)" readonly>Rp.100.000</option>
-                                <option value="200000" onclick="getNilai(this.value)" readonly>Rp.200.000</option>
+                                <option value="50000" onclick="getNilai(50000)" readonly>Rp.50.000</option>
+                                <option value="100000" onclick="getNilai(100000)" readonly>Rp.100.000</option>
+                                <option value="200000" onclick="getNilai(200000)" readonly>Rp.200.000</option>
                             </select>
 
                             <!-- <a><input type="text" class="btn btn-info col-md-12" value="50000" onclick="getNilai(this.value)" readonly></a><br><br>
@@ -138,7 +138,14 @@
     function getNilai(nilai) {
         // var value = text();
         $('#nominal').val(nilai);
+        console.log(nilai)
     }
+
+    $('#pilih-nominal').on('change', function(e) {
+        e.preventDefault()
+        let nilai = $(this).val()
+        $('#nominal').val(nilai);
+    })
 </script>
 <script src="<?= base_url() ?>/assets/js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-a3XBeF6t11TJ5LWQ"></script>

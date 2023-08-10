@@ -89,6 +89,21 @@ $routes->group('/', ['filter' => 'auth'], function ($routes) {
     $routes->get('/buku-besar/coa', 'Laporan\BukuBesarController::filterOption');
     $routes->post('/buku-besar', 'Laporan\BukuBesarController::getData');
 
+    //Laporan Laba Rugi
+    $routes->get('/laporan-laba-rugi', 'Laporan\LabaRugiController::index');
+    $routes->get('/laba-rugi', 'Laporan\LabaRugiController::getData');
+    $routes->post('/laba-rugi', 'Laporan\LabaRugiController::getData');
+
+    //Laporan Arus Kas
+    $routes->get('/laporan-arus-kas', 'Laporan\ArusKasController::index');
+    $routes->get('/arus-kas', 'Laporan\ArusKasController::getData');
+    $routes->post('/arus-kas', 'Laporan\ArusKasController::getData');
+
+    //Neraca Saldo
+    $routes->get('/laporan-neraca-saldo', 'Laporan\NeracaSaldoController::index');
+    $routes->get('/neraca-saldo', 'Laporan\NeracaSaldoController::getData');
+    $routes->post('/neraca-saldo', 'Laporan\NeracaSaldoController::getData');
+
     /*
     * --------------------------------------------------------------------
     * Syair Lingga Update Routing End

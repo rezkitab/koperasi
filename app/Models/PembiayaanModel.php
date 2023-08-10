@@ -108,7 +108,7 @@ class PembiayaanModel extends Model
         $builder = $this->db->table('detail_pembiayaan');
         $builder->select('
         detail_pembiayaan.*,
-        pembiayaan.jumlah_pembiayaan,pembiayaan.angsuran,pembiayaan.total_pembiayaan,pembiayaan.biaya_administrasi,
+        pembiayaan.kode_pembiayaan,pembiayaan.jumlah_pembiayaan,pembiayaan.angsuran,pembiayaan.total_pembiayaan,pembiayaan.biaya_administrasi,
         users.full_name,users.no_hp');
         $builder->join('pembiayaan', 'detail_pembiayaan.pembiayaan_id=pembiayaan.id');
         $builder->join('users', 'users.id_user=pembiayaan.user_id');
@@ -154,7 +154,7 @@ class PembiayaanModel extends Model
         $builder = $this->db->table('detail_pembiayaan');
         $builder->select('
         detail_pembiayaan.*,
-        pembiayaan.jumlah_pembiayaan,pembiayaan.angsuran,pembiayaan.total_pembiayaan,
+        pembiayaan.jumlah_pembiayaan,pembiayaan.angsuran,pembiayaan.total_pembiayaan,pembiayaan.nama_barang,
         users.full_name,');
         $builder->join('pembiayaan', 'detail_pembiayaan.pembiayaan_id=pembiayaan.id');
         $builder->join('users', 'users.id_user=pembiayaan.user_id');

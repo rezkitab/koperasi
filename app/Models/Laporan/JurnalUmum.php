@@ -16,6 +16,10 @@ class JurnalUmum extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
+    protected $allowedFields = [
+        'tanggal', 'periode', 'no_bukti', 'kode_akun', 'deskripsi', 'dc', 'nominal', 'trans_ref'
+    ];
+
     public function store($data)
     {
         return $this->db->table('jurnal_umum')->insertBatch($data);

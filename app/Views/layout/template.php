@@ -144,6 +144,8 @@ use Config\MyConfig;
     <script src="<?= base_url() ?>/assets/js/script.js"></script>
     <script src="<?= base_url() ?>/assets/js/theme-customizer/customizer.js"></script>
     <script src="<?= base_url() ?>/assets/currency.js"></script>
+
+    <!-- conflict -->
     <script src="<?= base_url('assets/js/number.js') ?>"></script>
 
     <script>

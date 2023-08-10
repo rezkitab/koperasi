@@ -52,7 +52,7 @@
                                     <li><a href="<?= site_url('laporan-buku-besar') ?>">Buku Besar</a></li>
                                     <li><a href="<?= site_url('laporan-laba-rugi') ?>">Laba Rugi</a></li>
                                     <li><a href="<?= site_url('laporan-arus-kas') ?>">Arus Kas</a></li>
-                                    <li><a href="<?= site_url('laporan-neraca') ?>">Neraca</a></li>
+                                    <li><a href="<?= site_url('laporan-neraca-saldo') ?>">Neraca Saldo</a></li>
                                     <li><a href="<?= site_url('sisa-hasil-usaha') ?>">Sisa Hasil Usaha</a></li>
 
                                 </ul>
@@ -66,7 +66,6 @@
                                     <li><a href="/simpanan/simpanan_wajib">Simpanan Wajib</a></li>
                                     <li><a href="/simpanan/simpanan_manasuka">Simpanan Manasuka</a></li>
                                     <li><a href="<?= base_url('pembiayaan/anggota') ?>">Pembiayaan</a></li>
-                                    <li><a href="/pembiayaan/anggota">Pengunduran Diri</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
