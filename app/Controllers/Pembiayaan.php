@@ -511,7 +511,7 @@ class Pembiayaan extends BaseController
         $data = [
             'title'                     => 'Data Pembiayaan',
             'pembiayaan'                => $this->pembiayaanModel->getPembiayaanAnggota($this->session->get('id_user')),
-            'simpanan'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user'))
+            'simpanan_wajib'                  => $this->pembiayaanModel->getStatusSimpanan($this->session->get('id_user'))
         ];
         return view('pembiayaan/anggota_view_data_pembiayaan', $data);
     }

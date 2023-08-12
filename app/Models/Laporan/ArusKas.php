@@ -79,4 +79,133 @@ class ArusKas extends Model
 		return $res;
 	}
 	// END ARUS KAS
+
+
+	// NEW ARUS KAS
+	public function getSaldoAwalKas($periode)
+	{
+		$saldo_awal = $this->db->query("select g.kode_akun, g.nama_akun,g.saldo_normal ,g.saldo_awal_debet, g.saldo_awal_kredit, if(g.saldo_normal='d', g.saldo_awal_debet-g.saldo_awal_kredit,g.saldo_awal_kredit-g.saldo_awal_debet) as saldo_awal from
+        (
+            select aa.kode as kode_akun, aa.nama as nama_akun, aa.dc as saldo_normal,
+                   sum(if(aa.dc = 'd',ifnull(ab.debet,0)-ifnull(ab.kredit,0),0)) as saldo_awal_debet,
+                   sum(if(aa.dc = 'c',ifnull(ab.kredit,0)-ifnull(ab.debet,0),0)) as saldo_awal_kredit
+            from coa_items aa left join (
+                select a.no_bukti as nomor,a.periode,a.deskripsi as keterangan,a.tanggal,a.kode_akun as kode_akun,b.nama as nama_akun,
+                       sum(if(a.dc = 'd',a.nominal,0)) as debet,
+                       sum(if(a.dc = 'c',a.nominal,0)) as kredit
+                from coa_items b
+                         join jurnal_umum a on a.kode_akun=b.kode
+                where a.periode < ? and a.kode_akun = '1101'  group by a.kode_akun
+            ) as ab on aa.kode=ab.kode_akun where aa.kode = '1101' group by aa.kode order by aa.kode
+        ) as g", [$periode])->getResultObject();
+
+		return $saldo_awal;
+	}
+
+	public function getSaldoAkhirBank($periode)
+	{
+		$saldo_awal = $this->db->query("select g.kode_akun, g.nama_akun,g.saldo_normal ,g.saldo_awal_debet, g.saldo_awal_kredit, if(g.saldo_normal='d', g.saldo_awal_debet-g.saldo_awal_kredit,g.saldo_awal_kredit-g.saldo_awal_debet) as saldo_awal from
+        (
+            select aa.kode as kode_akun, aa.nama as nama_akun, aa.dc as saldo_normal,
+                   sum(if(aa.dc = 'd',ifnull(ab.debet,0)-ifnull(ab.kredit,0),0)) as saldo_awal_debet,
+                   sum(if(aa.dc = 'c',ifnull(ab.kredit,0)-ifnull(ab.debet,0),0)) as saldo_awal_kredit
+            from coa_items aa left join (
+                select a.no_bukti as nomor,a.periode,a.deskripsi as keterangan,a.tanggal,a.kode_akun as kode_akun,b.nama as nama_akun,
+                       sum(if(a.dc = 'd',a.nominal,0)) as debet,
+                       sum(if(a.dc = 'c',a.nominal,0)) as kredit
+                from coa_items b
+                         join jurnal_umum a on a.kode_akun=b.kode
+                where a.periode <= ? and a.kode_akun = '1102'  group by a.kode_akun
+            ) as ab on aa.kode=ab.kode_akun where aa.kode = '1102' group by aa.kode order by aa.kode
+        ) as g", [$periode])->getResultObject();
+
+		return $saldo_awal;
+	}
+
+
+	public function get_operating_activity($periode)
+	{
+		$header = $this->db->query("select a.kode, a.nama from coa_aktivitas a")->getResultObject();
+		$results = [];
+		$kenaikan_penurunan_kas = 0;
+		foreach ($header as $h) {
+			$subheader = $this->db->query("select a.jurnal_id,a.no_bukti,a.kode_akun as kode_akun,b.dc as saldo_normal,b.nama as nama_akun,
+            ifnull(sum(k.debet_kas),0) as debet_kas, 
+            ifnull(sum(k.kredit_kas),0) as kredit_kas
+            from jurnal_umum a
+            join coa_items b on a.kode_akun=b.kode
+            left join
+            (
+                select a.jurnal_id,a.no_bukti,a.kode_akun as kode_akun,b.dc as saldo_normal,b.nama as nama_akun,
+                if(a.dc = 'd',a.nominal,0) as debet_kas,
+                if(a.dc = 'c',a.nominal,0) as kredit_kas
+                from jurnal_umum a
+                join coa_items b on a.kode_akun=b.kode
+                where a.periode = ? and a.kode_akun in ('1101', '1102')
+            ) as k on a.no_bukti=k.no_bukti
+            where a.periode = ? and b.activity_id is not null and b.activity_id = ?
+            group by a.kode_akun ", [$periode, $periode, $h->kode])->getResultObject();
+			$subheader_results = [];
+			$total_saldo_pos = 0;
+			foreach ($subheader as $sh) {
+				$saldo_pos = $sh->debet_kas - $sh->kredit_kas;
+				$subheader_results_push = [
+					'kode_akun'     => $sh->kode_akun,
+					'nama_akun'     => $sh->nama_akun,
+					'saldo_normal'  => $sh->saldo_normal,
+					'saldo_tambah'  => $sh->debet_kas,
+					'saldo_kurang'  => $sh->kredit_kas,
+					'saldo'         => $saldo_pos > 0 ? number_format($saldo_pos, 2, ',', '.') : '(' . number_format(abs($saldo_pos), 2, ',', '.') . ')'
+				];
+				$total_saldo_pos = $total_saldo_pos + $saldo_pos;
+				array_push($subheader_results, $subheader_results_push);
+			}
+
+			$results_push = [
+				'kode'      => $h->kode,
+				'nama'      => $h->nama,
+				'label'     => 'Kas bersih yang diperoleh dari ' . $h->nama,
+				'saldo'     => $total_saldo_pos > 0 ? number_format($total_saldo_pos, 2, ',', '.') : '(' . number_format(abs($total_saldo_pos), 2, ',', '.') . ')',
+				'subheader' => $subheader_results
+			];
+
+			$kenaikan_penurunan_kas = $kenaikan_penurunan_kas + $total_saldo_pos;
+
+			array_push($results, $results_push);
+		}
+
+		$saldo_awal_data = $this->getSaldoAwalKas($periode);
+		$saldo_akhir_bank_data = $this->getSaldoAkhirBank($periode);
+
+		$saldo_awal = 0; //saldo awal kas
+		$saldo_akhir_bank = 0; //saldo akhir bank
+		if (count($saldo_awal_data) > 0) {
+			foreach ($saldo_awal_data as $key => $value) {
+				$saldo_awal = $saldo_awal + $value->saldo_awal;
+			}
+		}
+
+		if (count($saldo_akhir_bank_data) > 0) {
+			foreach ($saldo_akhir_bank_data as $key => $value) {
+				$saldo_akhir_bank = $saldo_akhir_bank + $value->saldo_awal;
+			}
+		}
+
+		$saldo_akhir_kas = $saldo_awal + $kenaikan_penurunan_kas + $saldo_akhir_bank;
+
+		$summary = [
+			'kenaikan_penuruan_kas'     => $kenaikan_penurunan_kas > 0 ? number_format($kenaikan_penurunan_kas, 2, ',', '.') : '(' . number_format(abs($kenaikan_penurunan_kas), 2, ',', '.') . ')',
+			'saldo_awal_kas'            => number_format($saldo_awal, 2, ',', '.'),
+			'saldo_akhir_bank'          => number_format($saldo_akhir_bank, 2, ',', '.'),
+			'saldo_akhir_kas'           => number_format($saldo_akhir_kas, 2, ',', '.')
+		];
+
+		$cashFlowResults = [
+			'cf'        => $results,
+			'summary'   => $summary
+		];
+
+		return $cashFlowResults;
+	}
+	// END NEW ARUS KAS
 }
