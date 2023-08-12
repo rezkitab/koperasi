@@ -95,8 +95,8 @@ class ArusKas extends Model
                        sum(if(a.dc = 'c',a.nominal,0)) as kredit
                 from coa_items b
                          join jurnal_umum a on a.kode_akun=b.kode
-                where a.periode < ? and a.kode_akun = '1101'  group by a.kode_akun
-            ) as ab on aa.kode=ab.kode_akun where aa.kode = '1101' group by aa.kode order by aa.kode
+                where a.periode < ? and a.kode_akun in ('1101', '1102')  group by a.kode_akun
+            ) as ab on aa.kode=ab.kode_akun where aa.kode in ('1101', '1102') group by aa.kode order by aa.kode
         ) as g", [$periode])->getResultObject();
 
 		return $saldo_awal;
@@ -130,13 +130,13 @@ class ArusKas extends Model
 		$kenaikan_penurunan_kas = 0;
 		foreach ($header as $h) {
 			$subheader = $this->db->query("select a.jurnal_id,a.no_bukti,a.kode_akun as kode_akun,b.dc as saldo_normal,b.nama as nama_akun,
-            ifnull(sum(k.debet_kas),0) as debet_kas, 
-            ifnull(sum(k.kredit_kas),0) as kredit_kas
+			ifnull(sum(if(k.poisis_jurnal = 'd', a.nominal, 0)),0) as debet_kas,
+            ifnull(sum(if(k.poisis_jurnal = 'c', k.kredit_kas, 0)),0) as kredit_kas
             from jurnal_umum a
             join coa_items b on a.kode_akun=b.kode
             left join
             (
-                select a.jurnal_id,a.no_bukti,a.kode_akun as kode_akun,b.dc as saldo_normal,b.nama as nama_akun,
+                select a.jurnal_id,a.no_bukti,a.kode_akun as kode_akun,a.dc as poisis_jurnal,b.dc as saldo_normal,b.nama as nama_akun,
                 if(a.dc = 'd',a.nominal,0) as debet_kas,
                 if(a.dc = 'c',a.nominal,0) as kredit_kas
                 from jurnal_umum a
@@ -178,25 +178,20 @@ class ArusKas extends Model
 		$saldo_akhir_bank_data = $this->getSaldoAkhirBank($periode);
 
 		$saldo_awal = 0; //saldo awal kas
-		$saldo_akhir_bank = 0; //saldo akhir bank
 		if (count($saldo_awal_data) > 0) {
 			foreach ($saldo_awal_data as $key => $value) {
 				$saldo_awal = $saldo_awal + $value->saldo_awal;
 			}
 		}
 
-		if (count($saldo_akhir_bank_data) > 0) {
-			foreach ($saldo_akhir_bank_data as $key => $value) {
-				$saldo_akhir_bank = $saldo_akhir_bank + $value->saldo_awal;
-			}
-		}
 
-		$saldo_akhir_kas = $saldo_awal + $kenaikan_penurunan_kas + $saldo_akhir_bank;
+
+		$saldo_akhir_kas = $saldo_awal + $kenaikan_penurunan_kas;
 
 		$summary = [
 			'kenaikan_penuruan_kas'     => $kenaikan_penurunan_kas > 0 ? number_format($kenaikan_penurunan_kas, 2, ',', '.') : '(' . number_format(abs($kenaikan_penurunan_kas), 2, ',', '.') . ')',
 			'saldo_awal_kas'            => number_format($saldo_awal, 2, ',', '.'),
-			'saldo_akhir_bank'          => number_format($saldo_akhir_bank, 2, ',', '.'),
+
 			'saldo_akhir_kas'           => number_format($saldo_akhir_kas, 2, ',', '.')
 		];
 

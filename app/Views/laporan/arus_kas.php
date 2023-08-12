@@ -127,10 +127,7 @@
                         <td class="text-primary">Saldo Awal Kas ${info.periode}</td>
                         <td class="text-primary text-end">${summary.saldo_awal_kas}</td>
                     </tr>`
-                html2 += `<tr>
-                        <td class="text-primary">Saldo Bank ${info.periode}</td>
-                        <td class="text-primary text-end">${summary.saldo_akhir_bank}</td>
-                    </tr>`
+
                 html2 += `<tr style="border-top:solid 2px;border-bottom:solid 2px;">
                         <td class="text-primary">Saldo Akhir Kas & Bank ${info.periode}</td>
                         <td class="text-primary text-end">${summary.saldo_akhir_kas}</td>

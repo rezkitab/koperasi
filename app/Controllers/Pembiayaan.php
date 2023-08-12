@@ -253,7 +253,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '1104',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-PO-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'd',
                 'nominal'       => $pembiayaan->jumlah_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
@@ -264,7 +264,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '1102',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-PO-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'c',
                 'nominal'       => $pembiayaan->jumlah_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN PEMBELIAN BARANG'
@@ -282,7 +282,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '1102',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-AKD-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'd',
                 'nominal'       => $margin + $pembiayaan->biaya_administrasi,
                 'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
@@ -293,7 +293,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '4104',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-AKD-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'c',
                 'nominal'       => $pembiayaan->biaya_administrasi,
                 'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
@@ -304,7 +304,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '4103',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-AKD-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'c',
                 'nominal'       => $margin,
                 'trans_ref'     => 'PEMBIAYAAN AKAD MURABAHAH'
@@ -315,7 +315,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '1103',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-AR-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'd',
                 'nominal'       => $pembiayaan->total_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN'
@@ -326,7 +326,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '4102',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-AR-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'c',
                 'nominal'       => $pembiayaan->total_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN'
@@ -337,7 +337,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '5101',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-HPP-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'd',
                 'nominal'       => $pembiayaan->jumlah_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN'
@@ -348,7 +348,7 @@ class Pembiayaan extends BaseController
                 'periode'       => $periode,
                 'kode_akun'     => '1104',
                 'deskripsi'     => 'Pembiayaan Akad Murabahah',
-                'no_bukti'      => $pembiayaan->kode_pembiayaan,
+                'no_bukti'      => 'TRX-HPP-' . $pembiayaan->kode_pembiayaan,
                 'dc'            => 'c',
                 'nominal'       => $pembiayaan->jumlah_pembiayaan,
                 'trans_ref'     => 'PEMBIAYAAN'
