@@ -121,7 +121,7 @@
                                                         <form action="<?= base_url('simpanan/upload_image/' . $a->id . ''); ?>" class="needs-validation" novalidate="" enctype="multipart/form-data" method="post">
                                                             <?= csrf_field() ?>
                                                             <div class="row g-3">
-                                                                <!-- <input type="text" name="id" value="<?= $a->id ?>" hidden> -->
+                                                                <input type="hidden" name="id" value="<?= $a->id ?>" hidden>
 
                                                                 <div class="col-md-12">
                                                                     <label>Nama Lengkap</label>

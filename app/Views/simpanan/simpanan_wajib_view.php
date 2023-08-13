@@ -22,6 +22,16 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <select name="" id="" class="form-control form-control-sm">
+                                    <option value="">-- Pilih --</option>
+                                    <option value="Y">Sudah Bayar</option>
+                                    <option value="N">Belum Bayar</option>
+                                </select>
+                            </div>
+                        </div>
+<br>
                         <div class="table-responsive">
                             <table class="display" id="basic-1">
                                 <thead>

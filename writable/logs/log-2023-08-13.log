@@ -1,0 +1,1457 @@
+INFO - 2023-08-13 04:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:27:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:27:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:27:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:27:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:28:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:28:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:28:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:28:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:28:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:28:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:28:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:28:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:29:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:29:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:29:16 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:29:16 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:30:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:30:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 11:30:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:30:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:30:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 11:30:43 --> Undefined variable $id
+in APPPATH\Views\laporan\simpanan_pokok.php on line 181.
+ 1 APPPATH\Views\laporan\simpanan_pokok.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\simpanan_pokok.php', 181)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\simpanan_pokok.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/simpanan_pokok', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(33): view('laporan/simpanan_pokok', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->simpanan_pokok()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:30:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:30:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:31:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:31:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:31:07 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:31:07 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:46:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:46:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:47:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:47:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:48:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:48:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:49:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:49:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:50:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:50:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:50:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:50:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:50:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:50:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:50:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar like "%%" and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(61): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->search_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:50:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar like "%%" and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar like "%%" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar like "%%" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar like "%%" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(61): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar like "%%" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->search_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:50:25 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:50:25 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:50:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:50:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:51:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:51:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:51:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:51:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:51:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:51:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:52:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:52:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:52:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:52:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 11:52:13 --> Call to undefined function App\Controllers\dead()
+in APPPATH\Controllers\LaporanController.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:52:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:52:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:52:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:52:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:54:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:54:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:54:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:54:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 11:54:48 --> Array to string conversion
+in APPPATH\Controllers\LaporanController.php on line 167.
+ 1 APPPATH\Controllers\LaporanController.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\data\\ci4\\koperasi\\app\\Controllers\\LaporanController.php', 167)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:55:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:55:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:55:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:55:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:55:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:55:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:55:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:55:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:55:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:55:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:55:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:55:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:56:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:56:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 42 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:56:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:56:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 04:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:59:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:59:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:59:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:59:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  
+        and u.role = 2' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(164): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user 
+        where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  
+        and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 04:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 04:59:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 11:59:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 11:59:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 11:59:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar <=  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar >=  and sp.tgl_bayar <=  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:01:42 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:01:42 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:01:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:01:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:01:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:01:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:01:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:01:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 170 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:02:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:02:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:02:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:02:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 56 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 56 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 56 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 56 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:02:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:02:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:02:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:02:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:02:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:02:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:02:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:02:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:02:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:02:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:02:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:02:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN  AND  and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN  AND  and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:05:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:05:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:05:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:05:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:05:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:05:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:05:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:05:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN 2023-08-01 AND 2023-08-31 and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:06:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:06:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 12:06:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 12:06:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(163): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user = 42 and sp.tgl_bayar sp.tgl_bayar BETWEEN "2023-08-01" AND "2023-08-31" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 05:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:06:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:06:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:06:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:06:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:07:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:07:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:07:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:07:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:07:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:07:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:07:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:07:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:07:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:07:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:08:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:08:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:08:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:08:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:08:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:08:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:08:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:08:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:08:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:08:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:10:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:10:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:11:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:11:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:11:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:11:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:16:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:16:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:16:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:16:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-13 05:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:16:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:17:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:17:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:18:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:18:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:18:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:18:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:19:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:19:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:19:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:19:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:19:42 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:19:42 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:19:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:19:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:20:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:20:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:21:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:21:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:21:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:21:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:23:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:23:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:23:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:23:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:24:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:24:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:24:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:24:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:24:33 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:24:33 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:24:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:24:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:24:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:24:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:25:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:25:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:25:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:25:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:26:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:26:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:26:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:26:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:27:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:27:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:28:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:28:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:28:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:28:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:30:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:30:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:30:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:30:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:30:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:30:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:31:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:31:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:32:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:32:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:32:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:32:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:33:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:33:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:44:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:44:22 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:44:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:44:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:44:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:44:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:45:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:45:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:45:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:45:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:45:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:45:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:33 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:33 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:38 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:38 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:52:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:52:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:53:44 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:53:44 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:53:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:53:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:53:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:53:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:54:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:54:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:54:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:54:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:55:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:55:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:55:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:55:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:56:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:56:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:56:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:56:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:56:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:56:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:56:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:56:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:57:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:57:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:57:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:57:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:58:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:58:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:58:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:58:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:58:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:58:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:58:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:58:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:59:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:59:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 05:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 05:59:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 12:59:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:01:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:01:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:01:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:01:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:02:55 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:02:55 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:57 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:57 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:03:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:03:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:04:07 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:04:07 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:04:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:04:26 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:04:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:04:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:05:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:05:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:05:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:05:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:05:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:05:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:05:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:05:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:06:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:06:13 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 13:06:13 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\laporan\pdf_pokok.php on line 92.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_pokok', [], true)
+ 4 APPPATH\Controllers\LaporanController.php(136): view('laporan/pdf_pokok', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_pokok_view()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:06:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:06:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:06:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:06:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 13:06:54 --> Cannot use object of type stdClass as array
+in APPPATH\Views\laporan\pdf_pokok.php on line 92.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_pokok', [], true)
+ 4 APPPATH\Controllers\LaporanController.php(136): view('laporan/pdf_pokok', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_pokok_view()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:07:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:07:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:08:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:08:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:08:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:08:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:09:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:09:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:09:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:09:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:17:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:17:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:17:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:17:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:17:30 --> mysqli_sql_exception: Unknown column 'sp.nominal' in 'field list' in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.n...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.n...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.n...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.n...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:17:30 --> Unknown column 'sp.nominal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-06-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-06-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-06-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-06-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:17:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:17:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:18:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:18:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:18:05 --> mysqli_sql_exception: Unknown column 'sp.nominal' in 'field list' in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.n...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.n...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.n...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.n...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:18:05 --> Unknown column 'sp.nominal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-13 06:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:18:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:18:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:18:12 --> mysqli_sql_exception: Unknown column 'sp.nominal' in 'field list' in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.n...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.n...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.n...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.n...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:18:12 --> Unknown column 'sp.nominal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(243): CodeIgniter\Database\BaseConnection->query('SELECT sum(sp.nominal) as total FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:18:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:18:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:18:57 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:18:57 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:19:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:19:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:19:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:19:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:19:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:19:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:19:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:19:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:20:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:20:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:20:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:20:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:20:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sw.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sw.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sw.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(248): CodeIgniter\Database\BaseConnection->query('SELECT sw.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:20:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sw.*, u.full_name, b.nama_bulan FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.id_user =  and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sw.*, u.full_name, b.nama_bulan FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.id_user =  and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sw.*, u.full_name, b.nama_bulan FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.id_user =  and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(248): CodeIgniter\Database\BaseConnection->query('SELECT sw.*, u.full_name, b.nama_bulan FROM riwayat_simpanan sw left join users u on u.id_user=sw.id_user left join bulan b on sw.id_bulan=b.id_bulan where sw.id_user =  and sw.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_wajib()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:23:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:23:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:24:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:24:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:24:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:24:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:24:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:24:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 13:24:09 --> Undefined variable $simpanan_wajib
+in APPPATH\Views\laporan\pdf_wajib.php on line 66.
+ 1 APPPATH\Views\laporan\pdf_wajib.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $simpanan_wajib', 'D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_wajib.php', 66)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_wajib.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_wajib', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(314): view('laporan/pdf_wajib', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_wajib_view()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:24:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:24:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:24:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:24:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:25:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:25:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:25:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:25:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:25:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:25:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:25:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:25:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:26:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:26:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:41:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:41:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:41:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:41:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:41:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:41:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:41:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:41:52 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:42:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:42:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:42:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:42:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:42:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:42:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 13:42:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:42:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:42:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:42:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:42:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:43:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:43:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:43:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:43:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:14 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:39 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:44:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:44:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:45:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:45:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:45:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:45:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:45:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:45:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:45:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:45:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:46:25 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:46:25 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:46:38 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:46:38 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:46:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:46:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:46:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:48:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:48:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:54:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:54:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:55:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:55:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:55:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT s...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT s...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT s...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT s...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:55:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:55:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:55:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:56:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:56:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:56:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:56:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:56:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT s...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT s...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT s...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT s...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:56:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 06:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:59:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:59:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 06:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 06:59:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 13:59:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 13:59:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT s...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT s...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT s...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT s...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 13:59:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-05-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:00:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:00:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:00:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:00:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-13 14:00:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT s...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT s...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT s...')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT s...')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-13 14:00:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-04-01" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-04-01" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-04-01" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(325): CodeIgniter\Database\BaseConnection->query('SELECT SELECT sw.*, u.full_name FROM simpanan_manasuka sw left join users u on u.id_user=sw.id_user where sw.tgl_bayar >= "2023-04-01" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->load_data_manasuka()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:01:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:01:36 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:01:44 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:01:44 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:03:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:03:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:03:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:03:19 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:03:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:03:54 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:03:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:03:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:04:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:04:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:05:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:05:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:05:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:05:43 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:06:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:06:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:06:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:06:18 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:06:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:06:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:07:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:07:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:10:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:10:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:10:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:10:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:10:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:10:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 14:10:29 --> Undefined variable $total
+in APPPATH\Views\laporan\pdf_manasuka.php on line 96.
+ 1 APPPATH\Views\laporan\pdf_manasuka.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php', 96)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_manasuka', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(203): view('laporan/pdf_manasuka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_manasuka_all()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:11:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:11:00 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 14:11:00 --> Undefined variable $total
+in APPPATH\Views\laporan\pdf_manasuka.php on line 96.
+ 1 APPPATH\Views\laporan\pdf_manasuka.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php', 96)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_manasuka', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(203): view('laporan/pdf_manasuka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_manasuka_all()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:11:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:11:20 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-13 14:11:20 --> Undefined variable $total
+in APPPATH\Views\laporan\pdf_manasuka.php on line 96.
+ 1 APPPATH\Views\laporan\pdf_manasuka.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php', 96)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_manasuka', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(203): view('laporan/pdf_manasuka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_manasuka_all()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:13:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:13:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:13:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:13:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:17 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-13 07:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:13:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:30 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:13:30 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\laporan\pdf_manasuka.php on line 82.
+ 1 APPPATH\Views\laporan\pdf_manasuka.php(82): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_manasuka', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(397): view('laporan/pdf_manasuka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_manasuka_view()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+INFO - 2023-08-13 07:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-13 07:14:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:14:29 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-13 14:14:29 --> [DEPRECATED] number_format(): Passing null to parameter #1 ($num) of type float is deprecated in APPPATH\Views\laporan\pdf_manasuka.php on line 82.
+ 1 APPPATH\Views\laporan\pdf_manasuka.php(82): number_format(null, 0, ',', '.')
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\laporan\\pdf_manasuka.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/pdf_manasuka', [], true)
+ 5 APPPATH\Controllers\LaporanController.php(397): view('laporan/pdf_manasuka', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_manasuka_view()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')

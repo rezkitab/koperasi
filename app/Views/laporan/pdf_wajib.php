@@ -6,8 +6,7 @@
     <title>Cetak Pembayaran</title>
     <base href="<?php echo base_url(); ?>" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         table {
             border-collapse: collapse;
@@ -43,7 +42,7 @@
 <body onload="window.print();">
 
     <h4 align="center" style="margin-top:0px;"><u>KOPERASI SIMPAN PINJAM
-LAPORAN SIMPANAN WAJIB</u></h4>
+            LAPORAN SIMPANAN WAJIB</u></h4>
     <b>
 
     </b>
@@ -54,10 +53,10 @@ LAPORAN SIMPANAN WAJIB</u></h4>
             <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>Nominal</th>
+                <th>Tanggal Bayar</th>
                 <th>Bulan</th>
                 <th>Status</th>
-                <th>Tanggal Bayar</th>
+                <th>Nominal</th>
             </tr>
         </thead>
         <tbody>
@@ -67,7 +66,7 @@ LAPORAN SIMPANAN WAJIB</u></h4>
                 <tr>
                     <th scope="row"><?= $no++ ?></th>
                     <td><?= $a->full_name ?></td>
-                    <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
+                    <td><?= $a->tgl_bayar ?></td>
                     <td><?= $a->nama_bulan ?></td>
                     <td><?php if ($a->status == 200) { ?>
                             Berhasil
@@ -77,11 +76,21 @@ LAPORAN SIMPANAN WAJIB</u></h4>
 
                             Gagal
                         <?php } ?></td>
-                    <td><?= $a->tgl_bayar ?></td>
-
+                    
+                    <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
 
                 </tr>
             <?php endforeach ?>
+        </tbody>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total: </td>
+                <td id="total">Rp. <?= number_format($total->total, 0, ",", ".")  ?></td>
+            </tr>
         </tbody>
     </table>
 
