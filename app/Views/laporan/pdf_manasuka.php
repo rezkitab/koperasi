@@ -6,8 +6,7 @@
     <title>Cetak Pembayaran</title>
     <base href="<?php echo base_url(); ?>" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         table {
             border-collapse: collapse;
@@ -43,7 +42,7 @@
 <body onload="window.print();">
 
     <h4 align="center" style="margin-top:0px;"><u>KOPERASI SIMPAN PINJAM
-LAPORAN SIMPANAN MANASUKA</u></h4>
+            LAPORAN SIMPANAN MANASUKA</u></h4>
     <b>
 
     </b>
@@ -54,11 +53,11 @@ LAPORAN SIMPANAN MANASUKA</u></h4>
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>Tanggal Penarikan</th>
                 <th>Nama Bank</th>
                 <th>No Rekening</th>
-                <th>Nominal</th>
                 <th>Status</th>
-                <th>Tanggal Penarikan</th>
+                <th>Nominal</th>
             </tr>
         </thead>
         <tbody>
@@ -68,22 +67,34 @@ LAPORAN SIMPANAN MANASUKA</u></h4>
                 <tr>
                     <th scope="row"><?= $no++ ?></th>
                     <td><?= $a->full_name ?></td>
+                    <td><?= $a->tgl_penarikan ?></td>
                     <td><?= $a->nama_bank ?></td>
                     <td><?= $a->no_rekening ?></td>
-                    <td>Rp. <?= number_format($a->nominal, 0, ",", ".")  ?></td>
-                    <td><?php if ($a->status == 200) { ?>
+                    
+                    <td><?php if ($a->status == 1) { ?>
                             Berhasil
-                        <?php } elseif ($a->status == 201) { ?>
+                        <?php } elseif ($a->status == 2) { ?>
                             Pending
                         <?php } else { ?>
 
                             Gagal
                         <?php } ?></td>
-                    <td><?= $a->tgl_penarikan ?></td>
+                        <td>Rp. <?= number_format($a->nominal_tarik, 0, ",", ".")  ?></td>
 
 
                 </tr>
             <?php endforeach ?>
+        </tbody>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total: </td>
+                <td id="total">Rp. <?= number_format($total->total, 0, ",", ".")  ?></td>
+            </tr>
         </tbody>
     </table>
 

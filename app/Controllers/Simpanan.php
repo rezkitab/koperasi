@@ -399,6 +399,8 @@ class Simpanan extends BaseController
     public function upload_image($id)
     {
         $dataimage = $this->request->getFile('image');
+        // var_dump($this->request->getPost('nominal'));
+        // die;
 
         $fileName = $dataimage->getClientName();
         $data = [
@@ -409,7 +411,39 @@ class Simpanan extends BaseController
         ];
         $this->db->table('simpanan_manasuka')->where('id', $id)->set($data)->update();
         $dataimage->move('assets/foto/bukti_transfer/', $fileName);
+
+        $tanggal = date('Y-m-d');
+        $periode = set_periode($tanggal);
+        $nominal = $this->request->getPost('nominal');
+        $kode = 'TRX-MANASUKA-' . $this->request->getPost('id');
+        $keterangan = 'Pernarikan Simpanan Manasuka Anggota - ' . $this->session->get('id_user');
+        $kode_akun_debet = "1102"; //bank
+        $kode_akun_kredit = "3202"; //simpanan wajib
+        $gl = [
+            [
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => $kode_akun_debet,
+                'deskripsi'     => $keterangan,
+                'no_bukti'      => $kode,
+                'dc'            => 'd',
+                'nominal'       => $nominal,
+                'trans_ref'     => 'SIMPANAN MANASUKA'
+            ],
+            [
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => $kode_akun_kredit,
+                'deskripsi'     => $keterangan,
+                'no_bukti'      => $kode,
+                'dc'            => 'c',
+                'nominal'       => $nominal,
+                'trans_ref'     => 'SIMPANAN MANASUKA'
+            ],
+        ];
+        $this->jurnal_umum->insertBatch($gl);
         session()->setFlashdata('success', 'image Berhasil diupload');
+
         return redirect()->to(base_url('simpanan/verifikasi_manasuka'));
     }
     public function add_simpanan_wajib($id)
