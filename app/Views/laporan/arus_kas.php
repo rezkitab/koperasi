@@ -53,6 +53,9 @@
 
                                 </tbody>
                             </table>
+                            <table class="table mt-4" id="table-data-summary">
+                                <tbody></tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -78,7 +81,7 @@
 
     function load_data(formData) {
         $.ajax({
-            type: 'POST',
+            type: 'post',
             url: "<?= site_url('/arus-kas') ?>",
             data: formData,
             async: false,
@@ -87,143 +90,58 @@
             processData: false,
             dataType: 'json',
             success: function(res) {
+                let response = res.results;
+                let data = response.data;
+                let info = response.info;
+                console.log(data)
+
                 let html = '';
-                let results = res.results;
-                let data = results.values;
 
-                let pendapatan = data.pendapatan;
-                let beban = data.beban;
-                let investing = data.investing;
-                let financing = data.financing;
-                let total_operasi = 0;
-
-                let debet_pendapatan = 0;
-                let kredit_penedapatan = 0;
-
-                let debet_beban = 0;
-                let kredit_beban = 0;
-
-
-                let debet_investing = 0;
-                let kredit_investing = 0;
-
-
-                let debet_financing = 0;
-                let kredit_financing = 0;
-
-                let total_pendapatan = 0;
-                let total_beban = 0;
-                let total_investing = 0;
-                let total_financing = 0;
-
-                let total_cf = 0;
-                let saldo_akhir = 0;
-                html += `<tr class="text-bold">
-					<td class="text-primary" colspan="2">Operating Activities</td>
-					<td class="text-primary text-end">IDR</td>
-				</tr>`;
-
-
-                for (let i = 0; i < pendapatan.length; i++) {
-                    const line = pendapatan[i];
-
-                    html += `<tr>
-						<td></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${line.kode_akun} - ${line.nama_akun}</td>
-						<td class="text-end">${line.saldo_normal == 'D' ? '(' + format_number(line.debet)+',00)' : format_number(line.kredit) + ',00'}</td>
-					</tr>`;
-                    debet_pendapatan += parseInt(line.debet);
-                    kredit_penedapatan += parseInt(line.kredit);
+                let cf = data.cf
+                for (let y = 0; y < cf.length; y++) {
+                    const line1 = cf[y];
+                    html += `<tr style="background-color: #f8f9fa">
+                        <td colspan="2" class="text-primary">${line1.nama}</td>
+                    </tr>`
+                    let subheader = line1.subheader
+                    for (let i = 0; i < subheader.length; i++) {
+                        const line11 = subheader[i]
+                        let totalItems = 0;
+                        html += `<tr>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${line11.kode_akun} - ${line11.nama_akun}</td>
+                                <td class="text-end">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${line11.saldo}</td>
+                            </tr>`
+                    }
+                    html += `<tr style="border-top:solid 2px">
+                            <td class="text-primary">&nbsp;&nbsp;&nbsp;${line1.label}</td>
+                            <td class="text-primary text-end">&nbsp;&nbsp;&nbsp;${line1.saldo}</td>
+                        </tr>`
                 }
-                total_pendapatan = kredit_penedapatan - debet_pendapatan;
+                let html2 = '';
+                let summary = data.summary;
+                html2 += `<tr style="border-top:solid 2px;">
+                        <td class="text-primary">Kenaikan (Penurunan) Kas</td>
+                        <td class="text-primary text-end">${summary.kenaikan_penuruan_kas}</td>
+                    </tr>`
+                html2 += `<tr>
+                        <td class="text-primary">Saldo Awal Kas ${info.periode}</td>
+                        <td class="text-primary text-end">${summary.saldo_awal_kas}</td>
+                    </tr>`
 
-                for (let i = 0; i < beban.length; i++) {
-                    const line = beban[i];
-                    html += `<tr>
-						<td></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${line.kode_akun} - ${line.nama_akun}</td>
-						<td class="text-end">${line.saldo_normal == 'd' ? '(' + format_number(line.debet)+',00)' : format_number(line.kredit) + ',00'}</td>
-					</tr>`;
-                    debet_beban += parseInt(line.debet);
-                    kredit_beban += parseInt(line.kredit);
-                }
-                total_beban = debet_beban - kredit_beban;
-                total_operasi = total_pendapatan - total_beban;
-                html += `<tr class="text-bold">
-					<td></td>
-					<td class="text-primary">Total Operating Activities</td>
-					<td class="text-end text-primary">${format_number(total_operasi) + ',00'}</td>
-				</tr>`;
+                html2 += `<tr style="border-top:solid 2px;border-bottom:solid 2px;">
+                        <td class="text-primary">Saldo Akhir Kas & Bank ${info.periode}</td>
+                        <td class="text-primary text-end">${summary.saldo_akhir_kas}</td>
+                    </tr>`
 
 
 
-                html += `<tr class="text-bold">
-					<td class="text-primary" colspan="3">Investing Activities</td>
-				</tr>`;
-                for (let i = 0; i < investing.length; i++) {
-                    const line = investing[i];
-                    html += `<tr>
-						<td></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${line.kode_akun} - ${line.nama_akun}</td>
-						<td class="text-end">${line.saldo_normal == 'C' ? '(' + format_number(line.kredit)+',00)' : format_number(line.debet) + ',00'}</td>
-					</tr>`;
-                    debet_investing += parseInt(line.debet);
-                    kredit_investing += parseInt(line.kredit);
-                }
-                total_investing = debet_investing - kredit_investing;
-                html += `<tr class="text-bold">
-					<td></td>
-					<td class="text-primary">Total Investing Activities</td>
-					<td class="text-end text-primary">(${format_number(total_investing) + ',00'})</td>
-				</tr>`;
-
-
-
-                html += `<tr class="text-bold">
-					<td class="text-primary" colspan="3">Financing Activities</td>
-				</tr>`;
-                for (let i = 0; i < financing.length; i++) {
-                    const line = financing[i];
-                    html += `<tr>
-						<td></td>
-						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${line.kode_akun} - ${line.nama_akun}</td>
-						<td class="text-end">${line.saldo_normal == 'D' ? '(' + format_number(line.debet)+',00)' : format_number(line.kredit) + ',00'}</td>
-					</tr>`;
-                    debet_financing += parseInt(line.debet);
-                    kredit_financing += parseInt(line.kredit);
-                }
-                total_financing = kredit_financing - debet_financing;
-                html += `<tr class="text-bold">
-					<td></td>
-					<td class="text-primary">Total Financing Activities</td>
-					<td class="text-end text-primary">${format_number(total_financing) + ',00'}</td>
-				</tr>`;
-
-
-                total_cf = (total_operasi - total_investing) + total_financing;
-                html += `<tr class="text-bold">
-					
-					<td class="text-primary" colspan="2">Total Arus Kas & Bank</td>
-					<td class="text-end text-primary">${format_number(total_cf) + ',00'}</td>
-				</tr>`;
-
-                html += `<tr class="text-bold">
-					<td class="text-primary" colspan="2">Saldo Awal Kas & Bank</td>
-					<td class="text-end text-primary">${format_number(data.saldo_awal) + ',00'}</td>
-				</tr>`;
-
-                saldo_akhir = total_cf + data.saldo_awal;
-
-                html += `<tr class="text-bold">
-					<td class="text-primary" colspan="2">Saldo Akhir Kas & Bank</td>
-					<td class="text-end text-primary">${format_number(saldo_akhir) + ',00'}</td>
-				</tr>`;
-
-                $('#periode-title').text(results.periode)
                 $('#table-data tbody').html(html);
+                $('#table-data-summary tbody').html(html2);
 
-                $('#report-content').show();
-            }
+                reportContent.find('#periode-title').text(info.periode);
+                reportContent.find('#modul-title').text(info.modul);
+                reportContent.show();
+            },
         });
     }
 

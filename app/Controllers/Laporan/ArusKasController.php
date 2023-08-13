@@ -29,23 +29,24 @@ class ArusKasController extends BaseController
     public function getData()
     {
         $periode = $this->request->getVar('periode');
-
         $periode_req = str_replace('-', '', $periode);
 
-        $data = $this->arusKas->get_cash_flow($periode_req);
-
-
-        $res = [
-            'status'         => true,
-            'title'         => 'Laporan Arus Kas',
-            'periode'       => periode_to_string($periode_req),
-            'values'         => $data
+        $resultData = $this->arusKas->get_operating_activity($periode_req);
+        // $resultData = $this->arusKas->getSaldoAwalKas($periode_req);
+        $data = [
+            'query' => [
+                'periode'   => $periode_req,
+            ],
+            'info'  => [
+                'periode' => periode_to_string($periode_req),
+            ],
+            'data'  => $resultData
         ];
 
         return $this->response->setJSON([
             'status'        => true,
             'message'       => 'Get Data Successfully',
-            'results'       => $res,
+            'results'       => $data,
             'errors'        => [],
         ], 200);
     }
