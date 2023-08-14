@@ -90,7 +90,7 @@
                                                     <tr>
                                                         <th>No</th>
                                                         <th>Nama</th>
-                                                        <th>Tanggal Penarikan</th>
+                                                        <th>Tanggal</th>
                                                         <th>Nama Bank</th>
                                                         <th>No Rekening</th>
                                                         <th>Jenis</th>
@@ -162,9 +162,21 @@
                     html += '<tr>' +
                         '<td>' + no++ + '</td>' +
                         '<td>' + obj.data[i].full_name + '</td>' +
-                        '<td>' + obj.data[i].tgl_penarikan + '</td>' +
-                        '<td>' + obj.data[i].nama_bank + '</td>' +
-                        '<td>' + obj.data[i].no_rekening + '</td>' +
+                        '<td>' + '' +
+                        ((obj.data[i].jenis == "Masuk") ?
+                            obj.data[i].tgl_bayar :
+                            obj.data[i].tgl_penarikan) +
+                        '</td>' +
+                        '<td>' + '' +
+                        ((obj.data[i].jenis == "Masuk") ?
+                            "Midtrans" :
+                            obj.data[i].nama_bank) +
+                        '</td>' +
+                        '<td>' + '' +
+                        ((obj.data[i].jenis == "Masuk") ?
+                        obj.data[i].order_id :
+                            obj.data[i].no_rekening) +
+                        '</td>' +
                         '<td>' + obj.data[i].jenis + '</td>' +
 
                         '<td>' + '' +
@@ -175,7 +187,7 @@
                         '</td>' +
                         '<td>' + '' +
                         ((obj.data[i].jenis == "Masuk") ?
-                            'Rp. ' + number_format(obj.data[i].nominal_tarik) :
+                            'Rp. ' + number_format(obj.data[i].nominal) :
                             'Rp. ' + number_format(obj.data[i].nominal_tarik)) +
                         '</td>' +
                         '</tr>';

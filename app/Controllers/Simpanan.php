@@ -245,7 +245,7 @@ class Simpanan extends BaseController
         left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . ' and status = 1 GROUP BY sm.id_user')->getResult();
         
         $simpanan_wajib  = $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray();
-        // var_dump($simpanan_wajib);
+        // var_dump($saldo);
         // die;
         $d = ['title' => 'Simpanan Manasuka', 'simpanan_manasuka' => $simpanan_manasuka, 'saldo' => $saldo,  'simpanan_wajib' => $simpanan_wajib];
         return view('simpanan/simpanan_manasuka', $d);
