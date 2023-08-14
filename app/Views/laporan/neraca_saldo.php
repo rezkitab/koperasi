@@ -6,11 +6,11 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>Arus Kas</h3>
+                    <h3>Neraca Saldo</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= site_url('/dashboard') ?>">Dashboard</a></li>
                         <li class="breadcrumb-item">Laporan</li>
-                        <li class="breadcrumb-item active">Arus Kas</li>
+                        <li class="breadcrumb-item active">Neraca Saldo</li>
                     </ol>
                 </div>
             </div>
@@ -74,7 +74,7 @@
     $('#periode').datepicker()
 </script>
 <script>
-    const reportTitle = 'Arus Kas';
+    const reportTitle = 'Neraca Saldo';
     const reportContent = $('#report-content');
     const tableData = $('#table-data');
     const formFilter = $('#form-filter');
