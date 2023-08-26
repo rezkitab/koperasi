@@ -267,3 +267,46 @@ WARNING - 2023-08-27 01:57:15 --> Session: Sessions is enabled, and one exists. 
 WARNING - 2023-08-27 01:57:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
 WARNING - 2023-08-27 01:57:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
 WARNING - 2023-08-27 01:57:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:59:35 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:59:45 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:59:55 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-27 01:59:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2' at line 1 in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u....', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u....')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u....')
+#3 D:\data\ci4\koperasi\app\Controllers\LaporanController.php(94): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u....')
+#4 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_pokok()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#9 {main}
+CRITICAL - 2023-08-27 01:59:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 4 APPPATH\Controllers\LaporanController.php(94): CodeIgniter\Database\BaseConnection->query('SELECT sp.*, u.full_name FROM simpanan_pokok sp left join users u on u.id_user=sp.id_user where sp.id_user =  and sp.tgl_bayar BETWEEN "" AND "" and u.role = 2')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\LaporanController->pdf_pokok()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 02:00:01 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:00:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:00:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:00:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-08-27 02:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-08-27 02:00:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:00:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:27 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:44 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:47 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:50 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:55 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 02:01:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
