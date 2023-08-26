@@ -31,13 +31,14 @@
                                         <table style="width: 650px; margin: 0 auto; background-color: #fff; border-radius: 8px">
                                             <tbody>
                                                 <tr>
-                                                    <td style="padding: 30px">
+                                                    <td style="padding: 30px; text-align: center;">
                                                         <h6 style="font-weight: 600">Pengunduran Diri</h6>
 
-                                                        <p>Total Simpanan Anda: Rp. <?= number_format($nominal) ?></p><br>
-                                                        <p>Untuk mengundurkan diri silahkan tekan button dibawah!</p>
-                                                        <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#AmbilUang" type="button" title="Ambil Uang" class="btn btn-warning">
-                                                            <i class="fa fa-dollar"> Tarik</i>
+                                                        <p>Total Simpanan Anda: Rp. <?= number_format($nominal) ?><br>
+                                                        Untuk mengundurkan diri silahkan tekan button dibawah!</p>
+                                                      
+                                                        <button data-bs-toggle="modal" data-original-title="test" data-bs-target="#AmbilUang" type="button" title="Ambil Uang" class="btn btn-primary">
+                                                            <i class="fa fa-users"> Ajukan Pengunduran Diri</i>
                                                         </button>
                                                         <!-- <p>Good luck! Hope it works.</p>
                                                             <p style="margin-bottom: 0">
