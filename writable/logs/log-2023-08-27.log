@@ -1,0 +1,243 @@
+WARNING - 2023-08-27 00:01:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:03:09 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:09 --> Undefined property: stdClass::$id
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 59.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:10 --> Undefined property: stdClass::$id
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 59.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 59)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:46 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:46 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 80.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:48 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 80.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:48 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 80.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:49 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 80.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:03:49 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:03:49 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 80.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:04:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:04:11 --> Undefined property: stdClass::$nama_bank
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 84.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_bank', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 84)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:04:11 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:04:11 --> Undefined property: stdClass::$nama_bank
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 84.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_bank', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 84)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:04:12 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:04:12 --> Undefined property: stdClass::$nama_bank
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 84.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_bank', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 84)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:26:34 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:26:34 --> Undefined property: stdClass::$nama_bank
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 84.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_bank', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 84)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(65): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:26:37 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:26:56 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:27:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:27:08 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:30:31 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:30:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:30:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:31:03 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:31:53 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:32:04 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+ERROR - 2023-08-27 00:32:04 --> mysqli_sql_exception: Unknown column 'nama_pemilik' in 'field list' in D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `anggota...', 0)
+#1 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `anggota...')
+#2 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `anggota...')
+#3 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `anggota...', Array, false)
+#4 D:\data\ci4\koperasi\app\Controllers\PengunduranDiri.php(55): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\PengunduranDiri->request()
+#6 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+#7 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\data\ci4\koperasi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\data\ci4\koperasi\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\kop...')
+#10 {main}
+CRITICAL - 2023-08-27 00:32:04 --> Unknown column 'nama_pemilik' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `anggota` SET `nama_pemilik` = \'DANI\', `nama_bank` = \'BNI\', `no_rekening` = \'423413434134\', `nominal` = \'400000\'
+WHERE `user_id` = \'242\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `anggota` SET `nama_pemilik` = \'DANI\', `nama_bank` = \'BNI\', `no_rekening` = \'423413434134\', `nominal` = \'400000\'
+WHERE `user_id` = \'242\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `anggota` SET `nama_pemilik` = \'DANI\', `nama_bank` = \'BNI\', `no_rekening` = \'423413434134\', `nominal` = \'400000\'
+WHERE `user_id` = \'242\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `anggota` SET `nama_pemilik` = :nama_pemilik:, `nama_bank` = :nama_bank:, `no_rekening` = :no_rekening:, `nominal` = :nominal:
+WHERE `user_id` = :user_id:', [...], false)
+ 5 APPPATH\Controllers\PengunduranDiri.php(55): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->request()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:32:40 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:32:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:32:48 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:32:59 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:33:02 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:33:02 --> Undefined property: stdClass::$nama_penerima
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 79.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_penerima', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 79)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(68): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:34:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:34:15 --> Undefined property: stdClass::$nominal_tarik
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 94.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nominal_tarik', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(68): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:34:16 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+CRITICAL - 2023-08-27 00:34:16 --> Undefined property: stdClass::$nominal_tarik
+in APPPATH\Views\pengundurandiri\viewAdmin.php on line 94.
+ 1 APPPATH\Views\pengundurandiri\viewAdmin.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nominal_tarik', 'D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\data\\ci4\\koperasi\\app\\Views\\pengundurandiri\\viewAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pengundurandiri/viewAdmin', [], true)
+ 5 APPPATH\Controllers\PengunduranDiri.php(68): view('pengundurandiri/viewAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\PengunduranDiri->viewAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunduranDiri))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\data\\ci4\\koperasi\\public\\index.php')
+WARNING - 2023-08-27 00:34:32 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:35:41 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:36:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:37:15 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:37:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:38:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:38:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:40:06 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:40:21 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:40:51 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:40:58 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:42:05 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 00:42:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:04:10 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:04:23 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:04:24 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+WARNING - 2023-08-27 01:04:28 --> Session: Sessions is enabled, and one exists. Please don't $session->start();

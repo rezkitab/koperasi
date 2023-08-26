@@ -29,6 +29,7 @@
                                     <li><a href="<?= site_url('master-kategori-pengeluaran') ?>">Kategori Pengeluaran</a></li>
                                     <li><a href="/user">User</a></li>
                                     <li><a href="<?= base_url('pengurus') ?>">Pengurus</a></li>
+                                    <li><a href="<?= base_url('pengunduranDiri/viewAdmin') ?>">Pengunduran Diri</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="layout"></i><span>Transaksi</span></a>
@@ -66,6 +67,7 @@
                                     <li><a href="/simpanan/simpanan_wajib">Simpanan Wajib</a></li>
                                     <li><a href="/simpanan/simpanan_manasuka">Simpanan Manasuka</a></li>
                                     <li><a href="<?= base_url('pembiayaan/anggota') ?>">Pembiayaan</a></li>
+                                    <li><a href="<?= base_url('pengunduranDiri/index') ?>">Pengunduran Diri</a></li>
                                 </ul>
                             </li>
                         <?php } ?>

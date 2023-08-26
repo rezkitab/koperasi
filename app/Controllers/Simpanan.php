@@ -243,7 +243,7 @@ class Simpanan extends BaseController
         $saldo  = $this->db->query('SELECT ((SELECT SUM(sk.nominal) FROM simpanan_manasuka sk WHERE sk.id_user = ' . $this->session->get('id_user') . ' and sk.status = 1) - 
         (SELECT SUM(su.nominal_tarik) FROM simpanan_manasuka su WHERE su.id_user = ' . $this->session->get('id_user') . ')) as total FROM simpanan_manasuka sm 
         left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . ' and status = 1 GROUP BY sm.id_user')->getResult();
-        
+
         $simpanan_wajib  = $this->db->query('SELECT * FROM riwayat_simpanan sm left join users u on sm.id_user=u.id_user where sm.id_user = ' . $this->session->get('id_user') . '')->getRowArray();
         // var_dump($saldo);
         // die;
@@ -338,7 +338,7 @@ class Simpanan extends BaseController
                 'tgl_penarikan' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ];
-            
+
             // $this->db->table('simpanan_manasuka')->where('id', $this->request->getPost('id_manasuka'))->set($data_nominal)->update();
             $this->db->table('simpanan_manasuka')->set($data)->insert();
             return redirect()->to('/simpanan/simpanan_manasuka')->withInput()->with('message', 'Penarikan Berhasil. Silahkan menunggu 1X 24jam untuk di PROSES admin');
@@ -456,9 +456,15 @@ class Simpanan extends BaseController
         $jml_bulan
             = $this->db->query('SELECT id_bulan as total FROM riwayat_simpanan where id_sim_wajib = ' . $id . '')->getResult();
 
-        // var_dump($jml_bulan);
+        if (isset($riwayat_simpanan[0]->nominal) == true) {
+            $firstNominal = $riwayat_simpanan[0]->nominal;
+        } else {
+            $firstNominal= 0;
+        }
+
+        // var_dump($firstNominal);
         // die;
-        $d = ['title' => 'Simpanan', 'riwayat_simpanan' => $riwayat_simpanan, 'bulan' => $bulan, 'id_sim_wajib' => $id, 'tahun' => $simpanan_wajib['tahun'], 'jml_bulan' => $jml_bulan];
+        $d = ['title' => 'Simpanan', 'riwayat_simpanan' => $riwayat_simpanan, 'bulan' => $bulan, 'id_sim_wajib' => $id, 'tahun' => $simpanan_wajib['tahun'], 'jml_bulan' => $jml_bulan, 'firstNominal' => $firstNominal];
         return view('simpanan/add_simpanan_wajib', $d);
     }
 

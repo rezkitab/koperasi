@@ -85,9 +85,19 @@
                             <br>
                             <select class="form-control" id="pilih-nominal" title="Nominal" name="" required>
                                 <option selected disabled>Pilih Nominal</option>
-                                <option value="50000" onclick="getNilai(50000)" readonly>Rp.50.000</option>
-                                <option value="100000" onclick="getNilai(100000)" readonly>Rp.100.000</option>
-                                <option value="200000" onclick="getNilai(200000)" readonly>Rp.200.000</option>
+                                
+                                <?php if ($firstNominal == 50000) { ?>
+                                    <option value="50000" onclick="getNilai(50000)" readonly>Rp.50.000</option>
+                                <?php } elseif ($firstNominal == 100000) { ?>
+                                    <option value="100000" onclick="getNilai(100000)" readonly>Rp.100.000</option>
+                                <?php } elseif ($firstNominal == 200000) { ?>
+                                    <option value="200000" onclick="getNilai(200000)" readonly>Rp.200.000</option>
+                                <?php } else { ?>
+                                    <option value="50000" onclick="getNilai(50000)" readonly>Rp.50.000</option>
+                                    <option value="100000" onclick="getNilai(100000)" readonly>Rp.100.000</option>
+                                    <option value="200000" onclick="getNilai(200000)" readonly>Rp.200.000</option>
+                                <?php } ?>
+
                             </select>
 
                             <!-- <a><input type="text" class="btn btn-info col-md-12" value="50000" onclick="getNilai(this.value)" readonly></a><br><br>

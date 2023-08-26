@@ -93,6 +93,12 @@
             </tr>
         </tbody>
     </table>
+    <br><br><br>
+    <h5 style="margin-left: 82%;">Bandung, ...................</h5>
+    <br><br>
+    <h5 style="margin-left: 82%;">Pengurus</h5>
+    <br><br>
+    <h5 style="margin-left: 82%;">...................................</h5>
 
 </body>
 
