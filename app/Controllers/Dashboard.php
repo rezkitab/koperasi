@@ -37,17 +37,17 @@ class Dashboard extends BaseController
         //     return redirect()->to('/')->with('msg', '<div class="alert alert-info">Logout berhasil.</div>');
         // }
         if ($this->session->get('id_user') == 1) {
-            $total_pokok = $this->db->query('SELECT sum(nominal) as total FROM simpanan_pokok where status = 1')->getRowArray();
+            $total_pokok = $this->db->query('SELECT sum(sp.nominal) as total FROM simpanan_pokok sp, users u where sp.id_user=u.id_user and sp.status = 1 and u.is_active = 1')->getRowArray();
         } else {
             $total_pokok = $this->db->query('SELECT sum(nominal) as total FROM simpanan_pokok where id_user = ' . $this->session->get('id_user') . ' and status = 1')->getRowArray();
         }
         if ($this->session->get('id_user') == 1) {
-            $total_simpanan = $this->db->query('SELECT sum(nominal) as total FROM riwayat_simpanan where status = 200')->getRowArray();
+            $total_simpanan = $this->db->query('SELECT sum(rs.nominal) as total FROM riwayat_simpanan rs, users u where rs.id_user=u.id_user and rs.status = 200 and u.is_active = 1')->getRowArray();
         } else {
             $total_simpanan = $this->db->query('SELECT sum(nominal) as total FROM riwayat_simpanan where id_user = ' . $this->session->get('id_user') . ' and status = 200')->getRowArray();
         }
         if ($this->session->get('id_user') == 1) {
-            $total_manasuka = $this->db->query('SELECT sum(nominal) as total FROM simpanan_manasuka where status = 1')->getRowArray();
+            $total_manasuka = $this->db->query('SELECT sum(sm.nominal) as total FROM simpanan_manasuka sm, users u where sm.id_user=u.id_user and sm.status = 1 and u.is_active = 1')->getRowArray();
         } else {
             $total_manasuka = $this->db->query('SELECT sum(nominal) as total FROM simpanan_manasuka where id_user = ' . $this->session->get('id_user') . ' and status = 1')->getRowArray();
         }

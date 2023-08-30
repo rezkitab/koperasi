@@ -2,20 +2,22 @@
 
 namespace App\Controllers;
 
-use Config\MyConfig;
 use Throwable;
+use Config\MyConfig;
+use App\Models\Laporan\JurnalUmum;
 
 class PengunduranDiri extends BaseController
 {
     protected $validation;
     protected $session;
-    protected $db, $builder, $anggota, $myConfig;
+    protected $db, $builder, $anggota, $myConfig, $jurnalModel;
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->session = \Config\Services::session();
         $this->builder = $this->db->table('users');
         $this->anggota = $this->db->table('anggota');
+        $this->jurnalModel              = new JurnalUmum();
         $this->myConfig = new MyConfig;
         $this->validation       =  \Config\Services::validation();
         date_default_timezone_set("Asia/jakarta");
@@ -69,6 +71,12 @@ class PengunduranDiri extends BaseController
     }
     public function upload_image($id)
     {
+        $users  = $this->db->query('SELECT * FROM users where id_user = ' . $id . '')->getRow();
+        $total_pokok = $this->db->query('SELECT sum(nominal) as total FROM simpanan_pokok where id_user = ' . $id . ' and status = 1')->getRow();
+        $total_simpanan = $this->db->query('SELECT sum(nominal) as total FROM riwayat_simpanan where id_user = ' . $id . ' and status = 200')->getRow();
+        $total_manasuka = $this->db->query('SELECT sum(nominal) as total FROM simpanan_manasuka where id_user = ' . $id . ' and status = 1')->getRow();
+
+        // dd($total_simpanan->total);
         $dataimage = $this->request->getFile('image');
         // var_dump($this->request->getPost('nominal'));
         // die;
@@ -84,36 +92,70 @@ class PengunduranDiri extends BaseController
         $this->db->table('users')->where('id_user', $id)->set($data)->update();
         $dataimage->move('assets/foto/bukti_transfer/', $fileName);
 
-        // $tanggal = date('Y-m-d');
-        // $periode = set_periode($tanggal);
-        // $nominal = $this->request->getPost('nominal');
-        // $kode = 'TRX-MANASUKA-' . $this->request->getPost('id');
-        // $keterangan = 'Pernarikan Simpanan Manasuka Anggota - ' . $this->session->get('id_user');
-        // $kode_akun_debet = "1102"; //bank
-        // $kode_akun_kredit = "3202"; //simpanan wajib
-        // $gl = [
-        //     [
-        //         'tanggal'       => $tanggal,
-        //         'periode'       => $periode,
-        //         'kode_akun'     => $kode_akun_debet,
-        //         'deskripsi'     => $keterangan,
-        //         'no_bukti'      => $kode,
-        //         'dc'            => 'd',
-        //         'nominal'       => $nominal,
-        //         'trans_ref'     => 'SIMPANAN MANASUKA'
-        //     ],
-        //     [
-        //         'tanggal'       => $tanggal,
-        //         'periode'       => $periode,
-        //         'kode_akun'     => $kode_akun_kredit,
-        //         'deskripsi'     => $keterangan,
-        //         'no_bukti'      => $kode,
-        //         'dc'            => 'c',
-        //         'nominal'       => $nominal,
-        //         'trans_ref'     => 'SIMPANAN MANASUKA'
-        //     ],
-        // ];
-        // $this->jurnal_umum->insertBatch($gl);
+        
+
+        $tanggal = date('Y-m-d');
+        $periode = set_periode($tanggal);
+        $nominal = $total_manasuka->total;
+        $kode = 'TRX-MANASUKA-' . $id;
+        $keterangan = 'Pernarikan Simpanan Manasuka Anggota - ' . $id;
+        $kode_akun_debet = "1102"; //bank
+        $kode_akun_kredit = "3202"; //simpanan wajib
+        $gl = [
+            [
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => $kode_akun_kredit,
+                'deskripsi'     => $keterangan,
+                'no_bukti'      => $kode,
+                'dc'            => 'c',
+                'nominal'       => $nominal,
+                'trans_ref'     => 'SIMPANAN MANASUKA'
+            ],
+        ];
+        $this->jurnalModel->insertBatch($gl);
+
+        $tanggal = date('Y-m-d');
+        $periode = set_periode($tanggal);
+        $nominal = $total_pokok->total;
+        $kode = 'TRX-WAJIB-' . $id;
+        $keterangan = 'Pembayaran Simpanan Wajib Anggota - ' . $id;
+        $kode_akun_debet = "1102"; //bank
+        $kode_akun_kredit = "3202"; //simpanan wajib
+        $gl = [
+            [
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => $kode_akun_kredit,
+                'deskripsi'     => $keterangan,
+                'no_bukti'      => $kode,
+                'dc'            => 'c',
+                'nominal'       => $nominal,
+                'trans_ref'     => 'SIMPANAN WAJIB'
+            ],
+        ];
+        $this->jurnalModel->insertBatch($gl);
+
+        $tanggal = date('Y-m-d');
+        $periode = set_periode($tanggal);
+        $nominal = $total_simpanan->total;
+        $kode = 'TRX-MANASUKA-' . $id;
+        $keterangan = 'Pernarikan Simpanan Manasuka Anggota - ' . $id;
+        $kode_akun_debet = "1102"; //bank
+        $kode_akun_kredit = "3202"; //simpanan wajib
+        $gl = [
+            [
+                'tanggal'       => $tanggal,
+                'periode'       => $periode,
+                'kode_akun'     => $kode_akun_kredit,
+                'deskripsi'     => $keterangan,
+                'no_bukti'      => $kode,
+                'dc'            => 'c',
+                'nominal'       => $nominal,
+                'trans_ref'     => 'SIMPANAN MANASUKA'
+            ],
+        ];
+        $this->jurnalModel->insertBatch($gl);
         session()->setFlashdata('success', 'image Berhasil diupload');
 
         return redirect()->to(base_url('pengunduranDiri/viewAdmin'));
